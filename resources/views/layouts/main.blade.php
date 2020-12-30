@@ -85,7 +85,7 @@
             <li>
                 <div class="page-header">
                     <div class="page-title">
-                        <h3>Blank Page</h3>
+                        <h3>{{ __("Welcome. Be sure to stay safe 👏🏻🧴💦") }}</h3>
                     </div>
                 </div>
             </li>
