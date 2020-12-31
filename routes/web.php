@@ -21,6 +21,12 @@ Route::get('/', function () {
 /** @var \Illuminate\Routing\Router $router */
 $router->get('dashboard', fn()=> view('dashboard'));
 
+$router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function() use ($router){
+    $router->get('dashboard', function () {
+        return "Student dashboard";
+    });
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
