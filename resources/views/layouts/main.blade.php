@@ -180,8 +180,7 @@
         <div class="layout-px-spacing">
 
             <div class="row layout-top-spacing">
-
-
+                @yield('content')
             </div>
 
         </div>
