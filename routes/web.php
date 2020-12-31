@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 /** @var \Illuminate\Routing\Router $router */
 $router->get('dashboard', fn()=> view('dashboard'));
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
