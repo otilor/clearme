@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+/** @var \Illuminate\Routing\Router $router */
+$router->get('dashboard', fn()=> view('dashboard'));
