@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+@section('pageTitle', 'Complete Profile')
 @section('content')
     <div class="mx-auto col-lg-8">
         <div class="statbox widget box box-shadow">
