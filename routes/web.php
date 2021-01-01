@@ -21,10 +21,9 @@ Route::get('/', function () {
 /** @var \Illuminate\Routing\Router $router */
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function() use ($router){
-    $router->get('dashboard', function () {
-        return view('student.dashboard');
-    });
+    $router->get('dashboard', [\App\Http\Controllers\Student\StudentController::class, 'dashboard'])->name('student.dashboard');
 });
+
 
 Auth::routes();
 
