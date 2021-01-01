@@ -24,6 +24,10 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
     $router->get('dashboard', [\App\Http\Controllers\Student\StudentController::class, 'dashboard'])->name('student.dashboard');
 });
 
+$router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:student']], function() use ($router){
+    $router->get('dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('student.dashboard');
+});
+
 
 Auth::routes();
 
