@@ -20,11 +20,21 @@
                     </div>
                     <div class="form-group mb-4">
                         <label for="exampleFormControlSelect1">Select your faculty</label>
-                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
+                        <select name= "faculty" class="form-control" id="faculty" required>
                             <option selected="true" disabled="disabled">Choose Your faculty</option>
                             <option>Science and Science Education</option>
                             <option>Humanities</option>
                             <option>Social and Management Sciences</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-4" id="science_departments" style="display: none">
+                        <label for="exampleFormControlSelect1">Select your department</label>
+                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
+                            <option selected="true" disabled="disabled">Choose Your department</option>
+                            <option>Mathematical Sciences</option>
+                            <option>Biological Sciences</option>
+                            <option>Chemical Sciences</option>
                         </select>
                     </div>
                     <div>
@@ -35,4 +45,18 @@
         </div>
     </div>
 
+    <script
+        src="{{ asset('assets/js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script>
+        $('#faculty').on('change',function(){
+            var selection = $(this).val();
+            switch(selection){
+                case "Science and Science Education":
+                    $("#science_departments").show()
+                    break;
+                default:
+                    $("#science_departments").hide()
+            }
+        });
+    </script>
 @endsection
