@@ -3,6 +3,7 @@
 @section('pageTitle', 'Dashboard')
 
 @section('content')
+    @include('onboarding')
     <link href="{{ asset('assets/css/components/timeline/custom-timeline.css') }}" rel="stylesheet" type="text/css" />
     <div id="timelineBasic" class="col-lg-12 layout-spacing">
         <div class="statbox widget box box-shadow">
