@@ -16,11 +16,11 @@
                     @csrf
                     <div class="form-group mb-4">
                         <label for="exampleFormControlInput2">Matriculation number</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2">
+                        <input name="matric_number" type="text" class="form-control" id="exampleFormControlInput2" required>
                     </div>
                     <div class="form-group mb-4">
                         <label for="exampleFormControlSelect1">Select your faculty</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
                             <option selected="true" disabled="disabled">Choose Your faculty</option>
                             <option>Science and Science Education</option>
                             <option>Humanities</option>
