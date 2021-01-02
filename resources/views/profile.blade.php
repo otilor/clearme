@@ -70,9 +70,43 @@
         </div>
     </div>
 
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', event => {
+            // submit event detected
+            event.preventDefault()
+
+            var data = new FormData(form)
+            axios.post('/profile', data).then(function (response) {
+                // handle success
+                showToastr()
+            });
+            function showToastr() {
+                const toast = swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    padding: '2em'
+                });
+
+                toast({
+                    type: 'success',
+                    title: 'Updated profile',
+                    padding: '2em',
+                })
+            }
+
+
+        })
+    </script>
     <script
         src="{{ asset('assets/js/jquery-3.5.1.slim.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/sweetalerts/custom-sweetalert.js') }}"></script>
     <script>
+
         $('#faculty').on('change',function(){
             $(".departments").hide();
             var selection = $(this).val();
