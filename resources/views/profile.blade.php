@@ -12,7 +12,8 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form>
+                <form action="/profile" method="post">
+                    @csrf
                     <div class="form-group mb-4">
                         <label for="exampleFormControlInput2">Matriculation number</label>
                         <input type="text" class="form-control" id="exampleFormControlInput2">

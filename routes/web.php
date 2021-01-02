@@ -30,6 +30,8 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:student']], 
 });
 
 $router->get('profile', [ProfileController::class, 'index']);
+$router->post('profile', [ProfileController::class, 'store']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
