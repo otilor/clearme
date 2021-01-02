@@ -15,11 +15,12 @@
                 <form>
                     <div class="form-group mb-4">
                         <label for="exampleFormControlInput2">Matriculation number</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="AUL/SCI/17/01234">
+                        <input type="text" class="form-control" id="exampleFormControlInput2">
                     </div>
                     <div class="form-group mb-4">
                         <label for="exampleFormControlSelect1">Select your faculty</label>
                         <select class="form-control" id="exampleFormControlSelect1">
+                            <option selected="true" disabled="disabled">Choose Your faculty</option>
                             <option>Science and Science Education</option>
                             <option>Humanities</option>
                             <option>Social and Management Sciences</option>
@@ -32,4 +33,5 @@
             </div>
         </div>
     </div>
+
 @endsection
