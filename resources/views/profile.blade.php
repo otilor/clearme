@@ -30,7 +30,7 @@
 
                     <div class="form-group mb-4 departments" id="science_departments" style="display: none">
                         <label for="exampleFormControlSelect1">Select your department</label>
-                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
+                        <select name= "department" class="form-control" id="exampleFormControlSelect1" required>
                             <option selected="true" disabled="disabled">Choose Your department</option>
                             <option>Mathematical Sciences</option>
                             <option>Biological Sciences</option>
@@ -40,7 +40,7 @@
 
                     <div class="form-group mb-4 departments" id="social_science_departments" style="display: none">
                         <label for="exampleFormControlSelect1">Select your department</label>
-                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
+                        <select name= "department" class="form-control" id="exampleFormControlSelect1" required>
                             <option selected="true" disabled="disabled">Choose Your department</option>
                             <option>Political Science and International Relations</option>
                             <option>Economics</option>
@@ -52,7 +52,7 @@
 
                     <div class="form-group mb-4 departments" id="humanities_departments" style="display: none">
                         <label for="exampleFormControlSelect1">Select your department</label>
-                        <select name= "faculty" class="form-control" id="exampleFormControlSelect1" required>
+                        <select name= "department" class="form-control" id="exampleFormControlSelect1" required>
                             <option selected="true" disabled="disabled">Choose Your department</option>
                             <option>English and Literary studies</option>
                             <option>History and diplomatic studies</option>
