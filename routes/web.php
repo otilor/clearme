@@ -29,7 +29,7 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
     $router->get('dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 
-$router->get('profile', [ProfileController::class, 'index']);
+$router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
 $router->post('profile', [ProfileController::class, 'store']);
 
 Auth::routes();
