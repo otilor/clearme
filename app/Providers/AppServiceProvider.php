@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\User;
 use Calebporzio\Onboard\OnboardFacade;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -29,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
             ->link('/profile')
             ->cta('Complete')
             ->completeIf(function (User $user) {
-                return count($user->all()) < 1;
+                return $user->find(Auth::id())->profile->isComplete();
             });
     }
 }

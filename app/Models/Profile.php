@@ -14,9 +14,21 @@ class Profile extends Model
         'matric_number',
         'department',
         'faculty',
+        'is_completed',
     ];
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function isComplete()
+    {
+        return $this->is_completed;
+    }
+
+    public function makeComplete() : bool
+    {
+        $this->is_completed = true;
+        return true;
     }
 }

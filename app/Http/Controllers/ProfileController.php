@@ -25,7 +25,9 @@ class ProfileController extends Controller
 
     public function store(StoreProfileRequest $request)
     {
+        // Todo: Refactor update
         $this->user->find(Auth::id())->profile->update($request->all());
-        return "Done!";
+        $this->user->find(Auth::id())->profile->update(['is_completed' => true]);
+        return back();
     }
 }
