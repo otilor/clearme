@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,19 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
 $router->post('profile', [ProfileController::class, 'store']);
+
+// Automatic redirect
+$router->get('dashboard', function () {
+    if(! Auth::check()) {
+        return redirect(\route('login'));
+    }
+
+    if(Auth::user()->hasRole('admin')){
+        return redirect(\route('admin.dashboard'));
+    };
+
+    return redirect(\route('student.dashboard'));
+});
 
 Auth::routes();
 
