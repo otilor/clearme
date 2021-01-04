@@ -72,6 +72,7 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
+        import axios from 'axios';
         const form = document.querySelector('form');
         form.addEventListener('submit', event => {
             // submit event detected
