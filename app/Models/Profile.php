@@ -13,6 +13,7 @@ class Profile extends Model
         'user_id',
         'matric_number',
         'department',
+        'phone_number',
         'faculty',
         'is_completed',
     ];
