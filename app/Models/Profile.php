@@ -15,6 +15,7 @@ class Profile extends Model
         'department',
         'phone_number',
         'faculty',
+        'gender',
         'is_completed',
     ];
     public function user()
