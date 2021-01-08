@@ -24,7 +24,7 @@
                             <div class="t-dot t-dot-primary" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Updated Server Logs</p>
+                                <p>Registrar's office</p>
                                 <p class="t-meta-time">25 mins ago</p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                             <div class="t-dot t-dot-success" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Backup Files EOD</p>
+                                <p>Academic affairs division</p>
                                 <p class="t-meta-time">2 hrs ago</p>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             <div class="t-dot t-dot-warning" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Send Mail to HR and Admin</p>
+                                <p>Sports division</p>
                                 <p class="t-meta-time">4 hrs ago</p>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="t-dot t-dot-info" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Conference call with Marketing Manager.</p>
+                                <p>Laboratories & studios</p>
                                 <p class="t-meta-time">6 hrs ago</p>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                             <div class="t-dot t-dot-danger" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Collected documents from <a href="javascript:void(0);">Sara</a></p>
+                                <p>Faculty</p>
                                 <p class="t-meta-time">9 hrs ago</p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             <div class="t-dot t-dot-dark" data-original-title="" title="">
                             </div>
                             <div class="t-text">
-                                <p>Server rebooted successfully</p>
+                                <p>Hall of residence</p>
                                 <p class="t-meta-time">8 hrs ago</p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-dot t-dot-primary"</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-text"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Updated Server Logs<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bursary department<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"t-meta-time"</span>&gt;</span>25 mins ago<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

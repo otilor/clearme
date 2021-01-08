@@ -204,4 +204,4 @@ Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/Gabrie
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: public/assets/img/clearance.png
+[product-screenshot]: public/assets/img/clearme.png
