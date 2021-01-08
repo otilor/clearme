@@ -23,11 +23,16 @@ class ProfileController extends Controller
         return view('profile');
     }
 
+    /**
+     * @param StoreProfileRequest $request
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(StoreProfileRequest $request)
     {
         // Todo: Refactor update
         $this->user->find(Auth::id())->profile->update($request->all());
         $this->user->find(Auth::id())->profile->update(['is_completed' => true]);
-        return back();
+        return redirect('/dashboard');
     }
 }
