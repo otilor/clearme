@@ -105,44 +105,37 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Setting up clearme is a pretty easy step.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Clone the repository from GitHub
+* PHP >= 7.4
+* [Composer](https://github.com/othneildrew/Best-README-Template/issues)
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/GabrielFemi/clearme.git
    ```
-3. Install NPM packages
+2. Install Composer dependencies
    ```sh
-   npm install
+   composer install
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+3. Serve the application (Run in your Terminal) 
+   ```shell
+   php artisan serve
    ```
-
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
+* Seed the application with roles
+```shell
+php artisan permission:create-role admin
+php artisan permission:create-role student
+```
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -173,9 +166,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@humaneguy](https://twitter.com/humaneguy) - gabrielfemi799@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/GabrielFemi/clearme)
 
 
 
