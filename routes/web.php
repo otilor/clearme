@@ -47,4 +47,3 @@ $router->get('dashboard', function () {
 });
 
 Auth::routes();
-
