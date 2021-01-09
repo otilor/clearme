@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/dashboard');
-});
+})->middleware(['auth']);
 
 /** @var \Illuminate\Routing\Router $router */
 
