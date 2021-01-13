@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CompleteOnboarding;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin.dashboard');
+    $router->get('complete-onboarding', [CompleteOnboarding::class,'index']);
 });
 
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
