@@ -26,9 +26,8 @@ class HasAdminCompletedOnboarding
             abort(403);
         }
 
-
         if (! AdminsOnboarded::find(Auth::id())) {
-            return response('Yikes, you have to complete your registration, bruv.');
+            return redirect(route('admin.complete-onboarding'));
         }
         return $next($request);
     }
