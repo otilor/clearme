@@ -30,6 +30,7 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('has_admin_completed_onboarding');
     $router->get('complete-onboarding', [CompleteOnboarding::class,'index'])->name('admin.complete-onboarding');
+    $router->post('complete-onboarding', [CompleteOnboarding::class,'store']);
 });
 
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
@@ -49,3 +50,7 @@ $router->get('dashboard', function () {
 });
 
 Auth::routes();
+
+$router->get('test', function () {
+   return "Welcome, Samuel!";
+});
