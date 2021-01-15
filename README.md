@@ -122,7 +122,11 @@ Clone the repository from GitHub
    ```sh
    composer install
    ```
-3. Serve the application (Run in your Terminal) 
+3. Run the database seeder
+   ```shell
+    php artisan db:seed
+   ```
+4. Serve the application (Run in your Terminal) 
    ```shell
    php artisan serve
    ```
