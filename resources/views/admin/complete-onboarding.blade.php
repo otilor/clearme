@@ -25,10 +25,19 @@
                     <label for="exampleFormControlInput2">Section</label>
                     {{--Todo: dynamically display sections from database--}}
                     <select class="form-control">
-                        <option class="form-group">Student Affairs</option>
                         <option class="form-group">Bursary</option>
                         <option class="form-group">Security department</option>
-                        <option class="form-group">Laboratories</option>
+                        <option class="form-group">Academic affairs</option>
+                        <option class="form-group">University Library</option>
+                        <option class="form-group">Student Affairs</option>
+                        <option class="form-group">Sports division</option>
+                        <option class="form-group">Biology laboratory</option>
+                        <option class="form-group">Microbiology laboratory</option>
+                        <option class="form-group">Chemistry laboratory</option>
+                        <option class="form-group">Biochemistry laboratory</option>
+                        <option class="form-group">Physics laboratory</option>
+                        <option class="form-group">Language</option>
+                        <option class="form-group">Mass communication studio</option>
                     </select>
                 </div>
                 <div>
