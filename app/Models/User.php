@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -42,6 +43,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function createAdmin(array $validated) : array
+    {
+        $password = Str::random(8);
+        $user = $this->create(array_merge($validated, ['password' => bcrypt(Str::random(8))]));
+        return ['user' => $user, 'unhashedPassword' => $password];
+    }
 
     protected function profile()
     {

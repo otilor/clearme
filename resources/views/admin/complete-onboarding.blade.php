@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <label for="exampleFormControlInput2">Section</label>
                     {{--Todo: dynamically display sections from database--}}
-                    <select class="form-control">
+                    <select class="form-control" name="section">
                         <option class="form-group">Bursary</option>
                         <option class="form-group">Security department</option>
                         <option class="form-group">Academic affairs</option>
