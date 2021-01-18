@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\CompleteOnboarding;
+use App\Http\Controllers\Admin\CompleteOnboardingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +29,8 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('admin.dashboard')->middleware('has_admin_completed_onboarding');
-    $router->get('complete-onboarding', [CompleteOnboarding::class,'index'])->name('admin.complete-onboarding');
-    $router->post('complete-onboarding', [CompleteOnboarding::class,'store']);
+    $router->get('complete-onboarding', [CompleteOnboardingController::class,'index'])->name('admin.complete-onboarding');
+    $router->post('complete-onboarding', [CompleteOnboardingController::class,'store']);
 });
 
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
