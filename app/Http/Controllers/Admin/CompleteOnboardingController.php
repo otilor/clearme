@@ -30,7 +30,7 @@ class CompleteOnboardingController extends Controller
     public function store(StoreNewUserRequest $request)
     {
         // Delay job during database transaction
-        DB::transaction(function (){
+        DB::transaction(function () use($request){
             // Store the name of the new administrator in the database
             $userDetails = $this->user->createAdmin($request->validated());
             // Fire off an event that dictates that a new user has been created.
