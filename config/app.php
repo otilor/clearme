@@ -167,6 +167,7 @@ return [
          */
 
         \Calebporzio\Onboard\OnboardServiceProvider::class,
+        Yoeunes\Toastr\ToastrServiceProvider::class,
 
         /*
          * Application Service Providers...

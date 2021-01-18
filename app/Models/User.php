@@ -47,7 +47,8 @@ class User extends Authenticatable
     public function createAdmin(array $validated) : array
     {
         $password = Str::random(8);
-        $user = $this->create(array_merge($validated, ['password' => bcrypt(Str::random(8))]));
+        $user = $this->create(array_merge($validated, ['password' => bcrypt($password)]));
+        $user->assignRole('actor');
         return ['user' => $user, 'unhashedPassword' => $password];
     }
 
