@@ -3,11 +3,13 @@
 namespace App\Listeners;
 
 use App\Mail\NewAccountEmailVerificationMail;
+use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Contracts\Queue\UsesEncryption;
 
-class SendNewAccountEmailVerificationNotification implements ShouldQueue
+class SendNewAccountEmailVerificationNotification implements ShouldQueue, ShouldBeEncrypted
 {
     /**
      * Create the event listener.
