@@ -126,7 +126,13 @@ Clone the repository from GitHub
    ```shell
     php artisan db:seed
    ```
-4. Serve the application (Run in your Terminal) 
+   
+4. Run this script to create all necessary roles
+   ```shell
+    sh app/roles.sh
+    ```
+
+5. Serve the application (Run in your Terminal) 
    ```shell
    php artisan serve
    ```
