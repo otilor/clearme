@@ -48,7 +48,7 @@ class User extends Authenticatable
     {
         $password = Str::random(8);
         $user = $this->create(array_merge($validated, ['password' => bcrypt($password)]));
-        $user->assignRole('admin');
+        $user->assignRole('actor');
         return ['user' => $user, 'unhashedPassword' => $password];
     }
 
