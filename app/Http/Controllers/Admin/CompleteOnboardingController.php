@@ -43,6 +43,6 @@ class CompleteOnboardingController extends Controller
             ]);
             toastr()->addNotification('success', "{$userDetails['user']->name} has been contacted via email");
         });
-        return back();
+        return redirect(route('admin.dashboard'));
     }
 }
