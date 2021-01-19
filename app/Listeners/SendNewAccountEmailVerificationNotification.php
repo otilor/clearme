@@ -29,6 +29,7 @@ class SendNewAccountEmailVerificationNotification implements ShouldQueue, Should
      */
     public function handle($event)
     {
-        Mail::to('gabrielfemi799@gmail.com')->send(new NewAccountEmailVerificationMail($event->userDetails));
+        dump($event);
+        Mail::to($event->user->email)->send(new NewAccountEmailVerificationMail($event->userDetails));
     }
 }
