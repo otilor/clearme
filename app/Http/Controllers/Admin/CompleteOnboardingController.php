@@ -35,8 +35,8 @@ class CompleteOnboardingController extends Controller
             $userDetails = $this->user->createAdmin($request->validated());
             // Fire off an event that dictates that a new user has been created.
             CreatedNewAdmin::dispatch($userDetails);
+            toastr()->addNotification('success', "{$userDetails['user']->name} has been contacted via email");
         });
-        toastr()->addNotification('success', "{$userDetails['user']->name} has been contacted via email");
         return back();
     }
 }
