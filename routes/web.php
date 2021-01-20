@@ -50,7 +50,3 @@ $router->get('dashboard', function () {
 });
 
 Auth::routes();
-
-$router->get('test', function () {
-   return "Welcome, Samuel!";
-});

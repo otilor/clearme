@@ -9,6 +9,7 @@ class AdminsOnboarded extends Model
 {
     use HasFactory;
 
+    protected $table = 'admins_onboarded';
     protected $fillable = [
         'user_id',
         'is_onboarded'

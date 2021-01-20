@@ -26,7 +26,7 @@ class HasAdminCompletedOnboarding
             abort(403);
         }
 
-        if (! AdminsOnboarded::find(Auth::id())) {
+        if (AdminsOnboarded::where('user_id', Auth::id())->get()->isEmpty()) {
             return redirect(route('admin.complete-onboarding'));
         }
         return $next($request);
