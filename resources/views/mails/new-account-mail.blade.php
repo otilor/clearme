@@ -6,7 +6,7 @@ This action was initiated by test@gmail.com
 
 
 @component('mail::panel')
-    <strong>Username:</strong> danny<br>
+    <strong>Username:</strong> {{ $event['user']->mail  }}<br>
     <strong>Password:</strong> Jadfj23/SJ;
 @endcomponent
 @component('mail::button', ['url' => 'http://clearme.test/login'])
