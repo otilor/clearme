@@ -170,8 +170,9 @@
         $.post('/logout', {
             _token: hv,
         }).then(function () {
-            window.location.href = "/login";
+            //
         })
+        window.location.href = "/login";
     })
     $(document).ready(function() {
         App.init();
