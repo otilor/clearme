@@ -28,8 +28,6 @@
 <p align="center">
   <a href="https://github.com/GabrielFemi/clearme">
     <img src="public/assets/img/check.svg" alt="Logo" width="80" height="80">
-  <a href="https://github.com/GabrielFemi/clearme">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">ClearMe</h3>
