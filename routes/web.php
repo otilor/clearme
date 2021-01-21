@@ -37,8 +37,6 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
     $router->post('complete-onboarding', [CompleteOnboardingController::class,'store']);
 });
 
-
-
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
 $router->post('profile', [ProfileController::class, 'store']);
 
