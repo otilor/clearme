@@ -36,11 +36,11 @@ class CompleteOnboardingController extends Controller
             // Store the name of the new administrator in the database
             $userDetails = $this->user->createAdmin($request->validated());
             // Fire off an event that dictates that a new user has been created.
-            CreatedNewAdmin::dispatch($userDetails);
             AdminsOnboarded::create([
                 'user_id' => Auth::id(),
                 'is_onboarded' => true,
             ]);
+            CreatedNewAdmin::dispatch($userDetails);
             toastr()->addNotification('success', "{$userDetails['user']->name} has been contacted via email");
         });
         return redirect(route('admin.dashboard'));

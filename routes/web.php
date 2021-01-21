@@ -25,6 +25,10 @@ Route::get('/', function () {
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Student\StudentController::class, 'dashboard'])->name('student.dashboard');
+    $router->post('/clearance/start', function () {
+        toastr()->info('Started clearance');
+        return back();
+    });
 });
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() use ($router){
@@ -50,3 +54,7 @@ $router->get('dashboard', function () {
 });
 
 Auth::routes();
+
+$router->get('test', function () {
+   return new \App\Mail\NewAccountEmailVerificationMail(['ea']);
+});

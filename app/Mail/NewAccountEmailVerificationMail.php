@@ -30,6 +30,7 @@ class NewAccountEmailVerificationMail extends Mailable
      */
     public function build()
     {
+        $this->markdown('mails.new-account-mail');
         return $this->view('mails.new-account-mail')->with('data', $this->data);
     }
 }
