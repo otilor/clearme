@@ -25,6 +25,10 @@ Route::get('/', function () {
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Student\StudentController::class, 'dashboard'])->name('student.dashboard');
+    $router->post('/clearance/start', function () {
+        toastr()->info('Started clearance');
+        return back();
+    });
 });
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function() use ($router){
@@ -32,6 +36,8 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
     $router->get('complete-onboarding', [CompleteOnboardingController::class,'index'])->name('admin.complete-onboarding');
     $router->post('complete-onboarding', [CompleteOnboardingController::class,'store']);
 });
+
+
 
 $router->get('profile', [ProfileController::class, 'index'])->middleware('auth');
 $router->post('profile', [ProfileController::class, 'store']);

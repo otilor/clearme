@@ -7,9 +7,9 @@
     <link href="{{ asset('assets/css/components/timeline/custom-timeline.css') }}" rel="stylesheet" type="text/css" />
     @if(! auth()->user()->onboarding()->inProgress())
         <div class="mx-auto text-center col-lg-12 layout-spacing">
-            <form action="/onboarding/start" method="post">
+            <form action="clearance/start" method="post">
                 @csrf
-                <input class="btn btn-lg btn-primary" type="submit" value="Start onboarding">
+                <input class="btn btn-lg btn-primary" type="submit" value="Begin clearance">
             </form>
 
         </div>
