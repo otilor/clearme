@@ -74,6 +74,7 @@ class RegisterController extends Controller
         Profile::create([
             'user_id' => $user->id,
         ]);
+        $user->assignRole('student');
 
         return $user;
     }
