@@ -15,7 +15,7 @@
 
             <div class="widget widget-table-one">
                 <div class="widget-heading">
-                    <h5 class="">Transactions</h5>
+                    <h5 class="">Sections to request clearance</h5>
                 </div>
 
                 <div class="widget-content">
