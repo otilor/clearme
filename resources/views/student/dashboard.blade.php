@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>Electricity Bill</h4>
+                                    <h4>Student Affairs</h4>
                                     <p class="meta-date">4 Aug 1:00PM</p>
                                 </div>
 
