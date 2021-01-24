@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>Amy Diaz</h4>
+                                    <h4>Security unit</h4>
                                     <p class="meta-date">4 Aug 1:00PM</p>
                                 </div>
 
@@ -87,7 +87,7 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>Netflix</h4>
+                                    <h4>Medicals</h4>
                                     <p class="meta-date">4 Aug 1:00PM</p>
                                 </div>
 
