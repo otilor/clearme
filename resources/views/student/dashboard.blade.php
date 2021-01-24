@@ -177,6 +177,26 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="transactions-list">
+                        <div class="t-item">
+                            <div class="t-company-name">
+                                <div class="t-icon">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                    </div>
+                                </div>
+                                <div class="t-name">
+                                    <h4>Bursary department</h4>
+                                    <p class="meta-date">4 Aug 1:00PM</p>
+                                </div>
+
+                            </div>
+                            <div class="t-rate rate-dec">
+                                <p><span>-$32.00</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
