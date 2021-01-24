@@ -9,6 +9,7 @@
         <div class="mx-auto text-center col-lg-12 layout-spacing">
             <form action="clearance/start" method="post">
                 @csrf
+                @include('components.blockquote')
                 <input class="btn btn-lg btn-primary" type="submit" value="Begin clearance">
             </form>
 
