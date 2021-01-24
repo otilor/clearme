@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>Shaun Park</h4>
+                                    <h4>Laboratories</h4>
                                     <p class="meta-date">4 Aug 1:00PM</p>
                                 </div>
                             </div>
