@@ -25,9 +25,11 @@ Route::get('/', function () {
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function() use ($router){
     $router->get('dashboard', [\App\Http\Controllers\Student\StudentController::class, 'dashboard'])->name('student.dashboard');
-    $router->post('/clearance/start', function () {
-        toastr()->info('Started clearance');
-        return back();
+});
+
+$router->group(['prefix' => 'clearance', 'middleware' => ['auth', 'role:student']], function () use ($router){
+    $router->get('student-affairs', function () {
+        return "Yikes!";
     });
 });
 
