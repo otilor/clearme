@@ -17,7 +17,8 @@
                 <div class="widget-heading">
                     <h5 class="">Sections to request clearance</h5>
                 </div>
-                
+
+{{--                TODO: add icons--}}
                 <div class="widget-content">
                     <div class="transactions-list">
                         <div class="t-item">
