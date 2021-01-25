@@ -34,7 +34,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/student/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/student-affairs">
                                     @csrf
                                     Request
                                 </a>
