@@ -68,7 +68,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/ict-unit">
                                     Request
                                 </a>
                             </div>
@@ -95,7 +95,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/laboratories">
                                     Request
                                 </a>
                             </div>
@@ -122,7 +122,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/hall-of-residence">
                                     Request
                                 </a>
                             </div>
@@ -149,7 +149,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/head-of-department">
                                     Request
                                 </a>
                             </div>
@@ -176,7 +176,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/sports-division">
                                     Request
                                 </a>
                             </div>
@@ -203,7 +203,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/security-unit">
                                     Request
                                 </a>
                             </div>
@@ -230,7 +230,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/medicals">
                                     Request
                                 </a>
                             </div>
@@ -257,7 +257,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/clearance/bursary-department">
                                     Request
                                 </a>
                             </div>
