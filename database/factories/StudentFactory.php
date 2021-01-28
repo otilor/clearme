@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Department;
+use App\Models\Faculty;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,6 +27,8 @@ class StudentFactory extends Factory
         return [
             'name' => $this->faker->name,
             'matric_number' => 'AUL/SCI/17/' . $this->withFaker()->numberBetween(00001, 001221),
+            'department_id' => Department::factory(),
+            'faculty_id' => Faculty::factory(),
         ];
     }
     public function configure()
