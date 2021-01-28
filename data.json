@@ -1,0 +1,40 @@
+{
+    "students": [
+        {
+            "department": "Mathematical sciences",
+            "matriculation_number": "AUL/SCI/17/00113",
+            "name": "Gabriel Akinyosoye",
+            "programme": "Computer Science"
+        },
+        {
+            "department": "Mathematical sciences",
+            "matriculation_number": "AUL/SCI/17/00130",
+            "name": "Timothy Akiode",
+            "programme": "Computer Science"
+        },
+        {
+            "department": "Mathematical sciences",
+            "matriculation_number": "AUL/SCI/17/00139",
+            "name": "Precious Imoniakemu",
+            "programme": "Computer Science"
+        },
+        {
+            "department": "Mathematical sciences",
+            "matriculation_number": "AUL/SCI/17/00113",
+            "name": "Gabriel Akinyosoye",
+            "programme": "Computer Science"
+        },
+        {
+            "matriculation_number": "AUL/SCI/17/00113",
+            "name": "Gabriel Akinyosoye",
+            "department": "Mathematical sciences",
+            "programme": "Computer Science"
+        },
+        {
+            "matriculation_number": "AUL/SCI/17/00113",
+            "name": "Gabriel Akinyosoye",
+            "department": "Mathematical sciences",
+            "programme": "Computer Science"
+        }
+    ]
+}
