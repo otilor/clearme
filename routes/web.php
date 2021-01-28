@@ -33,6 +33,6 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 
 // Automatic redirect;
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-    
+
