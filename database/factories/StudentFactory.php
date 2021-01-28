@@ -22,10 +22,9 @@ class StudentFactory extends Factory
      */
     public function definition()
     {
-        $matricNumber = 'AUL/SCI/17/' . $this->withFaker()->numberBetween(00001, 001221);
         return [
             'name' => $this->faker->name,
-            'matric_number' => $matricNumber,
+            'matric_number' => 'AUL/SCI/17/' . $this->withFaker()->numberBetween(00001, 001221),
         ];
     }
     public function configure()
