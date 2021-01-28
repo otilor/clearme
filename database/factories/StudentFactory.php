@@ -25,7 +25,7 @@ class StudentFactory extends Factory
         $matricNumber = 'AUL/SCI/17/' . $this->withFaker()->numberBetween(00001, 001221);
         return [
             'name' => $this->faker->name,
-            'matric_number' => $matricNumber
+            'matric_number' => $matricNumber,
         ];
     }
     public function configure()
