@@ -35,3 +35,4 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 
 Auth::routes();
 
+    
