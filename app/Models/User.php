@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Calebporzio\Onboard\GetsOnboarded;
+use Database\Factories\StudentFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -60,5 +61,10 @@ class User extends Authenticatable
     public function isComplete()
     {
 
+    }
+
+    protected static function newFactory()
+    {
+        return StudentFactory::new();
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddPhoneNumberFieldToProfilesTable extends Migration
+class CreateFacultiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddPhoneNumberFieldToProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::table('profiles', function (Blueprint $table) {
-            $table->string('phone_number')->nullable();
+        Schema::create('faculties', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddPhoneNumberFieldToProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::table('profiles', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('faculties');
     }
 }
