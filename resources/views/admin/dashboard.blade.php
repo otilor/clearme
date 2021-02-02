@@ -257,7 +257,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/bursary-department/invite">
-                                    Invite
+                                    Invite 
                                 </a>
                             </div>
                         </div>
