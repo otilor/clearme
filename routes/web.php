@@ -28,9 +28,7 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 });
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
-    $router->get('dashboard', function () {
-       return "Welcome " . Auth::user()->name;
-    })->name('admin.dashboard');
+    $router->view('dashboard', 'admin.dashboard')->name('admin.dashboard');
 });
 
 $router->get('/dashboard', function () {
