@@ -41,7 +41,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/student-affairs/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/ict-unit/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/laboratories/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/hall-of-residence/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/head-of-department/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/sports-division/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -203,7 +203,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/security-unit/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/medicals/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                             </div>
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/bursary-department/invite">
-                                    Request
+                                    Invite
                                 </a>
                             </div>
                         </div>
