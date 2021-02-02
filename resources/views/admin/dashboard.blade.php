@@ -40,7 +40,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/student-affairs">
+                                <a class="btn btn-primary" href="/admin/student-affairs/invite">
                                     Request
                                 </a>
                             </div>
@@ -67,7 +67,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/ict-unit">
+                                <a class="btn btn-primary" href="/admin/ict-unit/invite">
                                     Request
                                 </a>
                             </div>
@@ -94,7 +94,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/laboratories">
+                                <a class="btn btn-primary" href="/admin/laboratories/invite">
                                     Request
                                 </a>
                             </div>
@@ -121,7 +121,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/hall-of-residence">
+                                <a class="btn btn-primary" href="/admin/hall-of-residence/invite">
                                     Request
                                 </a>
                             </div>
@@ -148,7 +148,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/head-of-department">
+                                <a class="btn btn-primary" href="/admin/head-of-department/invite">
                                     Request
                                 </a>
                             </div>
@@ -175,7 +175,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/sports-division">
+                                <a class="btn btn-primary" href="/admin/sports-division/invite">
                                     Request
                                 </a>
                             </div>
@@ -202,7 +202,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/security-unit">
+                                <a class="btn btn-primary" href="/admin/security-unit/invite">
                                     Request
                                 </a>
                             </div>
@@ -229,7 +229,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/medicals">
+                                <a class="btn btn-primary" href="/admin/medicals/invite">
                                     Request
                                 </a>
                             </div>
@@ -256,7 +256,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/clearance/bursary-department">
+                                <a class="btn btn-primary" href="/admin/bursary-department/invite">
                                     Request
                                 </a>
                             </div>
