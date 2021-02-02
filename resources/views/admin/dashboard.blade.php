@@ -19,12 +19,13 @@
 
                 {{--                TODO: add icons--}}
                 <div class="widget-content">
+                    @foreach($sections as $section)
                     <div class="transactions-list">
                         <div class="t-item">
                             <div class="t-company-name">
                                 <div class="t-name">
-                                    <h4>Student Affairs</h4>
-                                    <p class="meta-date">4 Aug 1:00PM</p>
+                                    <h4>{{ $section->name  }}</h4>
+{{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                 </div>
 
                             </div>
@@ -35,6 +36,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <div class="transactions-list">
                         <div class="t-item">
                             <div class="t-company-name">
