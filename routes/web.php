@@ -28,9 +28,16 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 });
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
-    //
+    $router->get('dashboard', function () {
+       return "Welcome" . Auth::user()->name;
+    })->name('admin.dashboard');
 });
 
+$router->get('/dashboard', function () {
+    if (Auth::user()->hasRole('admin')) {
+        return redirect(\route('admin.dashboard'));
+    }
+})->middleware(['auth']);
 // Automatic redirect;
 
 Auth::routes(['register' => false]);
