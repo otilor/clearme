@@ -37,6 +37,7 @@ $router->get('/dashboard', function () {
     if (Auth::user()->hasRole('admin')) {
         return redirect(\route('admin.dashboard'));
     }
+    echo "welcome  " . Auth::user()->roles ;
 })->middleware(['auth']);
 // Automatic redirect;
 
