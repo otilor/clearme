@@ -18,4 +18,9 @@ class AdminSeederCanBeSeededTest extends TestCase
     {
         $this->seed(AdminSeeder::class);
     }
+
+    public function test_database_has_admin_account()
+    {
+        $this->assertDatabaseHas('users', ['email' => 'admin@clearme.test']);
+    }
 }
