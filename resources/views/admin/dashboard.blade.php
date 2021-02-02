@@ -30,7 +30,7 @@
 
                             </div>
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/admin/{{ $section->id  }}/invite">
+                                <a class="btn btn-primary" href="/admin/sections/{{ $section->id  }}/invite">
                                     Invite
                                 </a>
                             </div>
