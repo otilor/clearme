@@ -28,7 +28,10 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 });
 
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
-    $router->view('dashboard', 'admin.dashboard')->name('admin.dashboard');
+    $router->view('dashboard', 'admin.dashboard', ['sections' => \App\Models\Section::all() ])->name('admin.dashboard');
+    $router->group(['prefix' => 'sections'], function () use ($router){
+        $router->get('{id}/invite', fn()=> 'Welcome');
+    });
 });
 
 $router->get('/dashboard', function () {
