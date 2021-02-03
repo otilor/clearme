@@ -20,7 +20,7 @@ class InviteController extends Controller
     {
         Mail::to($request->email)->send(new SendAdminInviteMail());
 
-        notify()->success("Contacted {$request->email} via mail");
+        notify('success')->success("Contacted {$request->email} via mail");
         return redirect('admin/dashboard');
     }
 }
