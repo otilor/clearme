@@ -15,6 +15,8 @@ class CreateAdminInvitesTable extends Migration
     {
         Schema::create('admin_invites', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('section_id');
+            $table->string('status');
             $table->timestamps();
         });
     }
