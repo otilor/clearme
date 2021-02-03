@@ -47,6 +47,6 @@ $router->get('/dashboard', function () {
         return redirect(\route('admin.dashboard'));
     }
 })->middleware(['auth']);
-// Automatic redirect;
+
 
 Auth::routes(['register' => false]);
