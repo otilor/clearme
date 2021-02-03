@@ -4,11 +4,14 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Section;
+
 class InviteController extends Controller
 {
-    public function invite()
+    public function invite($id)
     {
-        return view('admin.invite');
+        $section = Section::find($id);
+        return view('admin.invite', compact('section'));
     }
 
     public function send() : void
