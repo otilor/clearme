@@ -25,7 +25,8 @@
 
                     <h1 class="">{{ $section->name }}</h1>
                     <p class="signup-link recovery">Enter the proposed admin email and instructions will sent to them!</p>
-                    <form class="text-left" action="/admin/invite/{{ $section->id }}">
+                    <form class="text-left" action="/admin/invite/{{ $section->id }}" method="post">
+                        @csrf
                         <div class="form">
 
                             <div id="email-field" class="field-wrapper input">
