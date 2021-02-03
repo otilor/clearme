@@ -16,8 +16,9 @@ class InviteController extends Controller
         return view('admin.invite', compact('section'));
     }
 
-    public function send(SendAdminInviteMailRequest $request) : void
+    public function send(SendAdminInviteMailRequest $request)
     {
         Mail::to($request->email)->send(new SendAdminInviteMail());
+        // TODO: show notification
     }
 }
