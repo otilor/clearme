@@ -30,7 +30,7 @@ class SendAdminInviteMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.invite-sectional-admin');
+        return $this->markdown('mails.invite-sectional-admin');
     }
 
 }

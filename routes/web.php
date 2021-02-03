@@ -36,6 +36,8 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
     });
 });
 
+$router->get('mailable', fn()=> new \App\Mails\SendAdminInviteMail());
+
 $router->get('/dashboard', function () {
     if (Auth::user()->hasRole('admin')) {
         return redirect(\route('admin.dashboard'));
