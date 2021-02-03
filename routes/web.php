@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\CompleteOnboardingController;
 use App\Http\Controllers\InviteController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Student\StudentController;
 use App\Mail\SendAdminInviteMail;
 use Illuminate\Routing\Router;
