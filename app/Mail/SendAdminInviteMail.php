@@ -27,6 +27,6 @@ class SendAdminInviteMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.invite-sectional-admin');
+        return $this->from(env('no-reply@clearme.test'))->markdown('emails.invite-sectional-admin');
     }
 }
