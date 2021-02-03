@@ -12,4 +12,9 @@ class AdminInvite extends Model
     public const DECLINED = "Declined";
     public const APPROVED = "Approved";
 
+
+    protected $fillable = [
+        'section_id',
+        'status',
+    ];
 }
