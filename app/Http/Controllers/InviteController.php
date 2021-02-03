@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\SendAdminInviteMailRequest;
 use App\Models\Section;
 
 class InviteController extends Controller
@@ -13,7 +14,7 @@ class InviteController extends Controller
         return view('admin.invite', compact('section'));
     }
 
-    public function send() : void
+    public function send(SendAdminInviteMailRequest $request) : void
     {
         // send invite to proposed admin.
     }
