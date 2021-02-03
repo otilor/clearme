@@ -12,7 +12,8 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <x:notify-messages />
+
+    @notifyCss
     <link href="{{ asset('assets/css/plugins.css')  }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
@@ -97,8 +98,7 @@
 <!--  END NAVBAR  -->
 
 <!--  BEGIN MAIN CONTAINER  -->
-<div class="main-container" id="container">
-
+<div class="main-container" id="container">ß
     <div class="overlay"></div>
     <div class="search-overlay"></div>
 
@@ -182,9 +182,7 @@
 </script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
-@jquery
-@toastr_js
-@toastr_render
+@notifyJs
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 </body>
