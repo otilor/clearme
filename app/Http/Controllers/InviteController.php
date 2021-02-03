@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\SendAdminInviteMailRequest;
-use App\Mails\SendAdminInviteMail;
+use App\Mail\SendAdminInviteMail;
 use App\Models\Section;
 use Illuminate\Support\Facades\Mail;
 
