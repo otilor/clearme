@@ -32,6 +32,7 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
     $router->view('dashboard', 'admin.dashboard', ['sections' => \App\Models\Section::all() ])->name('admin.dashboard');
     $router->group(['prefix' => 'sections'], function () use ($router){
         $router->get('{section}/invite', [InviteController::class, 'invite']);
+        $router->post('{section}/invite', [InviteController::class, 'send']);
     });
 });
 
