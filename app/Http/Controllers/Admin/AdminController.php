@@ -11,8 +11,8 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $sections = Sections:all();
+        $sections = Section::all();
 
-        return view('admin.dashboard', compact('sections');
+        return view('admin.dashboard', compact('sections'));
     }
 }
