@@ -28,6 +28,6 @@ class InviteController extends Controller
 
         notify('success')->success("Contacted {$request->email} via mail");
 
-        return redirect('admin/dashboard');
+        return redirect(route('admin.dashboard'));
     }
 }
