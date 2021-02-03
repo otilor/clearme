@@ -8,9 +8,8 @@ use App\Models\Section;
 
 class InviteController extends Controller
 {
-    public function invite($id)
+    public function invite(Section $section)
     {
-        $section = Section::find($id);
         return view('admin.invite', compact('section'));
     }
 
