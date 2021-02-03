@@ -12,7 +12,8 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    @toastr_css
+
+    @notifyCss
     <link href="{{ asset('assets/css/plugins.css')  }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
@@ -42,7 +43,7 @@
 <!--  BEGIN NAVBAR  -->
 <div class="header-container fixed-top">
     <header class="header navbar navbar-expand-sm">
-
+        <x:notify-messages />
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
                 <a href="index.html">
@@ -92,13 +93,13 @@
                 </div>
             </li>
         </ul>
+
     </header>
 </div>
 <!--  END NAVBAR  -->
 
 <!--  BEGIN MAIN CONTAINER  -->
-<div class="main-container" id="container">
-
+<div class="main-container" id="container">ß
     <div class="overlay"></div>
     <div class="search-overlay"></div>
 
@@ -133,7 +134,6 @@
             <div class="row layout-top-spacing">
                 @yield('content')
             </div>
-
         </div>
         <div class="footer-wrapper">
             <div class="footer-section f-section-1">
@@ -182,9 +182,7 @@
 </script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
-@jquery
-@toastr_js
-@toastr_render
+@notifyJs
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 </body>

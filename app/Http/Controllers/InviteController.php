@@ -19,6 +19,8 @@ class InviteController extends Controller
     public function send(SendAdminInviteMailRequest $request)
     {
         Mail::to($request->email)->send(new SendAdminInviteMail());
-        // TODO: show notification
+
+        notify('success')->success("Contacted {$request->email} via mail");
+        return redirect('admin/dashboard');
     }
 }
