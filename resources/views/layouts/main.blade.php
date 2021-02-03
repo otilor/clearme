@@ -43,7 +43,7 @@
 <!--  BEGIN NAVBAR  -->
 <div class="header-container fixed-top">
     <header class="header navbar navbar-expand-sm">
-
+        <x:notify-messages />
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
                 <a href="index.html">
@@ -93,6 +93,7 @@
                 </div>
             </li>
         </ul>
+
     </header>
 </div>
 <!--  END NAVBAR  -->
@@ -133,7 +134,6 @@
             <div class="row layout-top-spacing">
                 @yield('content')
             </div>
-
         </div>
         <div class="footer-wrapper">
             <div class="footer-section f-section-1">
