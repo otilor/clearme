@@ -18,8 +18,8 @@ class NewCommand extends Command
             ->setDescription('Setup clearance application');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        echo "Hello";
+        return Command::SUCCESS;
     }
 }
