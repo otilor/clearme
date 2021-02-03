@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class AdminInvite extends Model
 {
     use HasFactory;
+    public const PENDING = "Pending";
+    public const DECLINED = "Declined";
+    public const APPROVED = "Approved";
+
 }
