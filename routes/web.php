@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CompleteOnboardingController;
 use App\Http\Controllers\InviteController;
 use App\Http\Controllers\ProfileController;
@@ -29,6 +30,14 @@ Route::get('/', function () {
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function () use ($router) {
     $router->get('dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
+});
+
+$router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
+    $router->get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    $router->group(['prefix' => 'sections'], function () use ($router) {
+        $router->get('{section}/invite', [InviteController::class, 'invite']);
+        $router->post('{section}/invite', [InviteController::class, 'send']);
+    });
 });
 
 $router->get('mailable', fn () => new SendAdminInviteMail());
