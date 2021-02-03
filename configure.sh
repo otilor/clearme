@@ -1,3 +1,6 @@
+echo "Copying .env.example"
+cp .env.example .env
+
 echo "Setting up authorization 🔓🔓🔓"
 
 
@@ -14,4 +17,6 @@ done
 php artisan permission:create-role student
 php artisan permission:create-role admin
 
+php artisan db:seed
+php artisan db:seed AdminSeeder::class
 echo "Finished setting up authorization 🚀🚀🚀"
