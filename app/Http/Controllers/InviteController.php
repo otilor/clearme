@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\SendAdminInviteMailRequest;
+use App\Mails\SendAdminInviteMail;
 use App\Models\Section;
+use Illuminate\Support\Facades\Mail;
 
 class InviteController extends Controller
 {
@@ -16,6 +18,6 @@ class InviteController extends Controller
 
     public function send(SendAdminInviteMailRequest $request) : void
     {
-        // send invite to proposed admin.
+        Mail::to($request->email)->send(new SendAdminInviteMail());
     }
 }
