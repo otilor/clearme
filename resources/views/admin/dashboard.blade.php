@@ -28,7 +28,7 @@
 {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                 </div>
 
-                            </div>
+                            </div>`
                             <div class="t-rate rate-dec">
                                 <a class="btn btn-primary" href="/admin/sections/{{ $section->id  }}/invite">
                                     Invite

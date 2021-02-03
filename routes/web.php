@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CompleteOnboardingController;
+use App\Http\Controllers\InviteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,7 @@ $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']]
 $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
     $router->view('dashboard', 'admin.dashboard', ['sections' => \App\Models\Section::all() ])->name('admin.dashboard');
     $router->group(['prefix' => 'sections'], function () use ($router){
-        $router->get('{id}/invite', fn()=> 'Welcome');
+        $router->get('{id}/invite', [InviteController::class, 'invite']);
     });
 });
 
