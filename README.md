@@ -44,7 +44,6 @@
     ·
     <a href="https://github.com/humaneguy/clearme/issues">Request Feature</a>
   </p>
-</p>
 
 
 
