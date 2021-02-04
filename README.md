@@ -122,17 +122,12 @@ Clone the repository from GitHub
    ```sh
    composer install
    ```
-3. Run the database seeder
+3. Run the application setup command
    ```shell
-    php artisan db:seed
+    php configure
    ```
-   
-4. Run this script to create all necessary roles
-   ```shell
-    sh app/roles.sh
-    ```
 
-5. Serve the application (Run in your Terminal) 
+4. Serve the application (Run in your Terminal) 
    ```shell
    php artisan serve
    ```
