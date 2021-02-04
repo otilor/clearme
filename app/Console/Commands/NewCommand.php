@@ -25,15 +25,16 @@ class NewCommand extends Command
         $progressBar = new ProgressBar($output, 50);
         $progressBar->start();
 
+        $output->writeln('Setting up project 🚀🚀');
         $i = 0;
-        while ($i++ < 50) {
-            $output->writeln('Setting up project 🚀🚀');
+        while ($i++ < 5) {
             // Clear permission cache
             exec('php artisan permission:cache-reset');
+
+            $progressBar->advance(5);
         }
 
-
-
+        $progressBar->finish();
         // TODO: Seed database
         return Command::SUCCESS;
     }
