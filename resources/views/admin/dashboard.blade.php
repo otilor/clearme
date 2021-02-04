@@ -30,9 +30,14 @@
 
                             </div>`
                             <div class="t-rate rate-dec">
-                                <a class="btn btn-primary" href="/admin/sections/{{ $section->id  }}/invite">
-                                    Invite
-                                </a>
+                                @if(is_null($section->admin_invite))
+                                    <a class="btn btn-primary" href="/admin/sections/{{ $section->id  }}/invite">
+                                        Invite
+                                    </a>
+                                @else
+                                    <span class="badge badge-success"> Invited </span>
+                                @endif
+
                             </div>
                         </div>
                     </div>

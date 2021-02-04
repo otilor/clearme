@@ -11,8 +11,7 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $sections = Section::all();
-
+        $sections = Section::with('admin_invite')->get();
         return view('admin.dashboard', compact('sections'));
     }
 }
