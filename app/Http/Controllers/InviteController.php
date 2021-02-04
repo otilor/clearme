@@ -29,7 +29,7 @@ class InviteController extends Controller
 
         $unhashedPassword = Str::random(8);
 
-        $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword), 'unhashedPassword' => $unhashedPassword]);
+        $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)]);
         $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword];
 
         Mail::to($request->email)->send(new SendAdminInviteMail($data));
