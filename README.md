@@ -163,7 +163,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Gabriel Akinyosoye - [@humaneguy](https://twitter.com/humaneguy) - humaneguy799@gmail.com
+Gabriel Akinyosoye - [@humaneguy](https://twitter.com/humaneguy) - gabrielfmei799@gmail.com
 
 Project Link: [https://github.com/humaneguy/clearme](https://github.com/humaneguy/clearme)
 
