@@ -134,12 +134,7 @@ Clone the repository from GitHub
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-* Seed the application with roles
-```shell
-php artisan permission:create-role admin
-php artisan permission:create-role student
-```
+
 <!-- ROADMAP -->
 ## Roadmap
 
