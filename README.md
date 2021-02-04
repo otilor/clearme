@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/GabrielFemi/clearme">
+  <a href="https://github.com/humaneguy/clearme">
     <img src="public/assets/img/check.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -42,9 +42,8 @@
     ·
     <a href="#">Report Bug</a>
     ·
-    <a href="https://github.com/gabrielfemi/clearme/issues">Request Feature</a>
+    <a href="https://github.com/humaneguy/clearme/issues">Request Feature</a>
   </p>
-</p>
 
 
 
@@ -81,16 +80,15 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Clearance in Higher institutions is always a difficult thing to process as students are required to visit various departments to get cleared which is a really time-taking process.
+
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+* Your time should be spent on more important things.
+* You shouldn't be wasting transport fare moving from one block to another just to get cleared.
+* You should be able to get cleared within or outside the campus.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 ### Built With
 
@@ -116,39 +114,29 @@ Clone the repository from GitHub
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/GabrielFemi/clearme.git
+   git clone https://github.com/humaneguy/clearme.git
    ```
 2. Install Composer dependencies
    ```sh
    composer install
    ```
-3. Run the database seeder
+3. Run the application setup command
    ```shell
-    php artisan db:seed
+    php configure
    ```
-   
-4. Run this script to create all necessary roles
-   ```shell
-    sh app/roles.sh
-    ```
 
-5. Serve the application (Run in your Terminal) 
+4. Serve the application (Run in your Terminal) 
    ```shell
    php artisan serve
    ```
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-* Seed the application with roles
-```shell
-php artisan permission:create-role admin
-php artisan permission:create-role student
-```
+
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/humaneguy/clearme/issues) for a list of proposed features (and known issues).
 
 
 
@@ -177,7 +165,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Gabriel Akinyosoye - [@humaneguy](https://twitter.com/humaneguy) - gabrielfemi799@gmail.com
 
-Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/GabrielFemi/clearme)
+Project Link: [https://github.com/humaneguy/clearme](https://github.com/humaneguy/clearme)
 
 
 
@@ -201,15 +189,15 @@ Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/Gabrie
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/GabrielFemi/clearme.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/humaneguy/clearme.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/GabrielFemi/clearme.svg?style=for-the-badge
-[forks-url]: https://img.shields.io/github/forks/GabrielFemi/clearme?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/GabrielFemi/clearme?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/humaneguy/clearme.svg?style=for-the-badge
+[forks-url]: https://img.shields.io/github/forks/humaneguy/clearme?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/humaneguy/clearme?style=for-the-badge
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GabrielFemi/clearme?style=for-the-badge
-[issues-url]: https://github.com/GabrielFemi/clearme/issues
-[license-shield]: https://img.shields.io/github/license/GabrielFemi/clearme?style=for-the-badge
-[license-url]: https://github.com/GabrielFemi/clearme/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/humaneguy/clearme?style=for-the-badge
+[issues-url]: https://github.com/humaneguy/clearme/issues
+[license-shield]: https://img.shields.io/github/license/humaneguy/clearme?style=for-the-badge
+[license-url]: https://github.com/humaneguy/clearme/blob/master/LICENSE.txt
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: public/assets/img/clearme.png
