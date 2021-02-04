@@ -3,9 +3,12 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\InviteController;
 use App\Http\Controllers\Student\StudentController;
+use App\Mail\SendAdminInviteMail;
+use App\Models\User;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
