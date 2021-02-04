@@ -11,13 +11,18 @@ class SendAdminInviteMail extends Mailable
     use Queueable, SerializesModels;
 
     /**
+     * @var $data
+     */
+    private $data;
+
+    /**
      * Create a new message instance.
      *
-     * @return void
+     * @param $data
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -27,6 +32,6 @@ class SendAdminInviteMail extends Mailable
      */
     public function build()
     {
-        return $this->from('no-reply@clearme.test')->markdown('emails.invite-sectional-admin');
+        return $this->from('no-reply@clearme.test')->markdown('emails.invite-sectional-admin', ['data' => $this->data]);
     }
 }
