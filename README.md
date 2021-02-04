@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/GabrielFemi/clearme">
+  <a href="https://github.com/humaneguy/clearme">
     <img src="public/assets/img/check.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -42,7 +42,7 @@
     ·
     <a href="#">Report Bug</a>
     ·
-    <a href="https://github.com/gabrielfemi/clearme/issues">Request Feature</a>
+    <a href="https://github.com/humaneguy/clearme/issues">Request Feature</a>
   </p>
 </p>
 
@@ -116,7 +116,7 @@ Clone the repository from GitHub
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/GabrielFemi/clearme.git
+   git clone https://github.com/humaneguy/clearme.git
    ```
 2. Install Composer dependencies
    ```sh
@@ -165,9 +165,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Gabriel Akinyosoye - [@humaneguy](https://twitter.com/humaneguy) - gabrielfemi799@gmail.com
+Gabriel Akinyosoye - [@humaneguy](https://twitter.com/humaneguy) - humaneguy799@gmail.com
 
-Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/GabrielFemi/clearme)
+Project Link: [https://github.com/humaneguy/clearme](https://github.com/humaneguy/clearme)
 
 
 
@@ -191,15 +191,15 @@ Project Link: [https://github.com/GabrielFemi/clearme](https://github.com/Gabrie
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/GabrielFemi/clearme.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/humaneguy/clearme.svg?style=for-the-badge
 [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/GabrielFemi/clearme.svg?style=for-the-badge
-[forks-url]: https://img.shields.io/github/forks/GabrielFemi/clearme?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/GabrielFemi/clearme?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/humaneguy/clearme.svg?style=for-the-badge
+[forks-url]: https://img.shields.io/github/forks/humaneguy/clearme?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/humaneguy/clearme?style=for-the-badge
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GabrielFemi/clearme?style=for-the-badge
-[issues-url]: https://github.com/GabrielFemi/clearme/issues
-[license-shield]: https://img.shields.io/github/license/GabrielFemi/clearme?style=for-the-badge
-[license-url]: https://github.com/GabrielFemi/clearme/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/humaneguy/clearme?style=for-the-badge
+[issues-url]: https://github.com/humaneguy/clearme/issues
+[license-shield]: https://img.shields.io/github/license/humaneguy/clearme?style=for-the-badge
+[license-url]: https://github.com/humaneguy/clearme/blob/master/LICENSE.txt
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: public/assets/img/clearme.png
