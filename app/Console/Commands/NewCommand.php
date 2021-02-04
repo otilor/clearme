@@ -41,6 +41,7 @@ class NewCommand extends Command
 
         $progressBar->finish();
         // TODO: Seed database
+        $output->writeln(PHP_EOL.'<comment>Setup complete! Enjoy the application.</comment>');
         return Command::SUCCESS;
     }
 }
