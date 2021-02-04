@@ -31,7 +31,12 @@ class NewCommand extends Command
             // Clear permission cache
             exec('php artisan permission:cache-reset');
 
-            $progressBar->advance(5);
+            $progressBar->advance();
+
+            exec('php artisan db:seed');
+            $progressBar->advance();
+            exec('php artisan db:seed AdminSeeder::class');
+
         }
 
         $progressBar->finish();
