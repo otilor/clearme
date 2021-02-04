@@ -20,6 +20,9 @@ class NewCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        // TODO: Set up authorization
+
+        // TODO: Seed database
         return Command::SUCCESS;
     }
 }
