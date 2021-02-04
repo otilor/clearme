@@ -21,11 +21,10 @@ class NewCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // TODO: Set up authorization
-        $output->writeln('Setting up authorization 🔒🔒🔒');
+        $output->writeln('Setting up project 🚀🚀');
 
         // Clear permission cache
-        Artisan::call('permission:cache-reset');
+        exec('php artisan permission:cache-reset');
 
         // TODO: Seed database
         return Command::SUCCESS;
