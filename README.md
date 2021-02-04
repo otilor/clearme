@@ -84,8 +84,8 @@ Clearance in Higher institutions is always a difficult thing to process as stude
 
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* Your time should be spent on more important things.
+* You shouldn't be wasting transport fare moving from one block to another just to get cleared.
 * You should be able to get cleared within or outside the campus.
 
 
