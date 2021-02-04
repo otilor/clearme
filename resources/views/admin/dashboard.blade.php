@@ -35,7 +35,7 @@
                                         Invite
                                     </a>
                                 @else
-                                    Invited
+                                    <span class="badge badge-success"> Invited </span>
                                 @endif
 
                             </div>
