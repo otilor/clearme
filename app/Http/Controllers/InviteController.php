@@ -20,8 +20,9 @@ class InviteController extends Controller
 
     public function send(SendAdminInviteMailRequest $request)
     {
+        $section_id = $request->section_id;
         AdminInvite::create([
-            'section_id' => $request->section_id,
+            'section_id' => $section_id,
             'status' => AdminInvite::PENDING
         ]);
 
@@ -29,7 +30,7 @@ class InviteController extends Controller
         $unhashedPassword = Str::random(8);
 
         $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)]);
-        $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($request->section_id)];
+        $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($section_id)];
 
         dispatch(new SendMail($request->email, $data));
 
