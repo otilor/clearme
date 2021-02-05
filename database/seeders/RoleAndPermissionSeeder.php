@@ -12,7 +12,7 @@ class RoleAndPermissionSeeder extends Seeder
 {
     public function run()
     {
-        $roles = ['admin', 'student'];
+        $roles = ['admin', 'student', 'sectional_admin'];
         foreach ($roles as $role) {
             Artisan::call('permission:create-role ' . $role);
         }

@@ -6,13 +6,12 @@ namespace App\Console\Commands;
 
 
 
-use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class NewCommand extends Command
+class SetupCommand extends Command
 {
     protected function configure()
     {
@@ -25,7 +24,7 @@ class NewCommand extends Command
         $progressBar = new ProgressBar($output, 50);
         $progressBar->start();
 
-        $output->writeln('Setting up project 🚀🚀');
+        $output->writeln(PHP_EOL . 'Setting up project 🚀🚀');
         $i = 0;
         while ($i++ < 5) {
             // Clear permission cache
