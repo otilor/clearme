@@ -6,7 +6,6 @@ namespace App\Console\Commands;
 
 
 
-use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
