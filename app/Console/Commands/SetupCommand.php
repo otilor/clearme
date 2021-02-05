@@ -12,7 +12,7 @@ use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class NewCommand extends Command
+class SetupCommand extends Command
 {
     protected function configure()
     {

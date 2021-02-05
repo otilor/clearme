@@ -8,6 +8,6 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
 }
 
 $app = new Symfony\Component\Console\Application('ClearMe Setup', '1.0.0');
-$app->add(new App\Console\Commands\NewCommand);
+$app->add(new App\Console\Commands\SetupCommand);
 
 $app->run();
