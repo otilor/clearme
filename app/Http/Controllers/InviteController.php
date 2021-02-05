@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\SendAdminInviteMailRequest;
-use App\Mail\SendAdminInviteMail;
+use App\Jobs\SendMail;
 use App\Models\AdminInvite;
 use App\Models\Section;
 use App\Models\User;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class InviteController extends Controller
@@ -32,7 +31,7 @@ class InviteController extends Controller
         $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)]);
         $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword];
 
-        Mail::to($request->email)->send(new SendAdminInviteMail($data));
+        dispatch(new SendMail($request->email, $data));
 
         notify('success')->success("Contacted {$request->email} via mail");
 
