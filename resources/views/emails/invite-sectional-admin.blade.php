@@ -1,7 +1,7 @@
 @component('mail::message')
 # Admin Invite
 
-You have been invited as an administrator on ClearMe.
+You have been invited as an administrator of the {{ $data->section->name }} section on ClearMe.
 
 Login using the following details
 
