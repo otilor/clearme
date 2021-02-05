@@ -20,6 +20,7 @@ class InviteController extends Controller
 
     public function send(SendAdminInviteMailRequest $request)
     {
+        // TODO: add tests
         $section_id = $request->section_id;
         AdminInvite::create([
             'section_id' => $section_id,
