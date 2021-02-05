@@ -18,9 +18,14 @@ class SetupCommandTest extends TestCase
      */
     public function test_startup_command_test()
     {
-        $app = new Application('Setup application');
+        $app = new Application('Clearme application');
         $app->add(new SetupCommand());
 
 
+        $tester = new CommandTester($app->find('install'));
+
+        $statusCode = $tester->execute([]);
+
+        $this->assertSame(0, $statusCode);
     }
 }
