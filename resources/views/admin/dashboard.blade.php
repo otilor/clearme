@@ -28,7 +28,7 @@
 {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                 </div>
 
-                            </div>`
+                            </div>
                             <div class="t-rate rate-dec">
                                 @if(is_null($section->admin_invite))
                                     <a class="btn btn-primary" href="/admin/sections/{{ $section->id  }}/invite">
