@@ -26,6 +26,6 @@ class SetupCommandTest extends TestCase
 
         $statusCode = $tester->execute([]);
 
-        $this->assertSame(0, $statusCode);
+        self::assertSame(0, $statusCode);
     }
 }
