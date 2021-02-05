@@ -167,7 +167,6 @@ return [
          */
 
         \Calebporzio\Onboard\OnboardServiceProvider::class,
-        Yoeunes\Toastr\ToastrServiceProvider::class,
         \Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
 
         /*
