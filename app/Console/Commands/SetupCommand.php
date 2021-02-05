@@ -24,7 +24,7 @@ class SetupCommand extends Command
         $progressBar = new ProgressBar($output, 50);
         $progressBar->start();
 
-        $output->writeln('Setting up project 🚀🚀');
+        $output->writeln(PHP_EOL . 'Setting up project 🚀🚀');
         $i = 0;
         while ($i++ < 5) {
             // Clear permission cache
