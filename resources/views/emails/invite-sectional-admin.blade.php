@@ -5,7 +5,7 @@ You have been invited as an administrator of the {{ $data->section->name }} sect
 
 Login using the following details
 
-Username: {{ $data->user->name }}<br>
+Username: {{ $data->user->email }}<br>
 Password: {{ $data->unhashedPassword }}
 
 @component('mail::button', ['url' => env('APP_URL')])
