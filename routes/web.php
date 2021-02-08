@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\InviteController;
+use App\Http\Controllers\SectionalAdminController;
 use App\Http\Controllers\Student\StudentController;
 use App\Mail\SendAdminInviteMail;
 use App\Models\User;
@@ -41,11 +42,8 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 });
 
 $router->group(['prefix' => 'sectional_admin'], function () use ($router) {
-    $router->get('/dashboard', function () {
-        return "Welcome, sectional head!";
-    })->middleware(['auth', 'role:sectional_admin']);
+    $router->get('/dashboard', [SectionalAdminController::class, 'dashboard'])->middleware(['auth', 'role:sectional_admin']);
 });
-
 
 
 $router->get('/dashboard', function () {
