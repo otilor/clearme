@@ -31,6 +31,9 @@ class InviteController extends Controller
         $unhashedPassword = Str::random(8);
 
         $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)]);
+        // Assign role to user
+        $user->assignRole('sectional_admin');
+
         $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($section_id)];
 
         dispatch(new SendMail($request->email, $data));
