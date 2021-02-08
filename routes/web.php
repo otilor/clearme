@@ -41,7 +41,7 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 });
 
 $router->group(['prefix' => 'sectional_admin'], function () use ($router) {
-    $router->get('/', function () {
+    $router->get('/dashboard', function () {
         return "Welcome, sectional head!";
     })->middleware(['auth', 'role:sectional_admin']);
 });
