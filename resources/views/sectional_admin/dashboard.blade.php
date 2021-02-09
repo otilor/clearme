@@ -15,7 +15,7 @@
 
         <div class="widget widget-table-one">
             <div class="widget-heading">
-                <h5 class="">Invite admins for the following sections</h5>
+                <h5 class="">Students pending clearance</h5>
             </div>
 
             {{--                TODO: add icons--}}
