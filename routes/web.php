@@ -42,13 +42,17 @@ $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], fu
 });
 
 $router->group(['prefix' => 'sectional_admin'], function () use ($router) {
-    $router->get('/dashboard', [SectionalAdminController::class, 'dashboard'])->middleware(['auth', 'role:sectional_admin']);
+    $router->get('/dashboard', [SectionalAdminController::class, 'dashboard'])->middleware(['auth', 'role:sectional_admin'])->name('sectional_admin.dashboard');
 });
 
 
 $router->get('/dashboard', function () {
     if (Auth::user()->hasRole('admin')) {
         return redirect(\route('admin.dashboard'));
+    }
+
+    if (Auth::user()->hasRole('sectional_admin')) {
+        return redirect(\route('sectional_admin.dashboard'));
     }
 })->middleware(['auth']);
 
