@@ -15,7 +15,7 @@
 
         <div class="widget widget-table-one">
             <div class="widget-heading">
-                <h5 class="">Invite admins for the following sections</h5>
+                <h5 class="">Students pending clearance</h5>
             </div>
 
             {{--                TODO: add icons--}}
@@ -29,7 +29,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th class="">Status</th>
-                            <th>Register</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -38,28 +38,28 @@
                             <td class="text-primary">Shaun Park</td>
                             <td>johndoe@yahoo.com</td>
                             <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
-                            <td>5 min ago</td>
+                            <td><button class="btn btn-success">Approve</button></td>
                         </tr>
                         <tr>
                             <td class="text-center">2</td>
                             <td class="text-primary">Andy King</td>
                             <td>andyking@gmail.com</td>
                             <td class=""><span class="badge outline-badge-secondary shadow-none">Pending</span></td>
-                            <td>10 min ago</td>
+                            <td><button class="btn btn-success">Approve</button></td>
                         </tr>
                         <tr>
                             <td class="text-center">3</td>
                             <td class="text-primary">Mary McDonald</td>
                             <td>lisadoe@live.com</td>
                             <td class=""><span class="badge outline-badge-info shadow-none">In Progress</span></td>
-                            <td>1 hour ago</td>
+                            <td><button class="btn btn-success">Approve</button></td>
                         </tr>
                         <tr>
                             <td class="text-center">4</td>
                             <td class="text-primary">Vincent Carpenter</td>
                             <td>vinnyc@outlook.com</td>
                             <td class=""><span class="badge outline-badge-danger shadow-none">Cancel</span></td>
-                            <td>1 day ago</td>
+                            <td><button class="btn btn-success">Approve</button></td>
                         </tr>
                         </tbody>
                     </table>
