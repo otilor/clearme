@@ -12,6 +12,7 @@
         {{--                --}}
         {{--            </form>--}}
 
+
         <div class="widget widget-table-one">
             <div class="widget-heading">
                 <h5 class="">Invite admins for the following sections</h5>
@@ -20,48 +21,50 @@
             {{--                TODO: add icons--}}
             <div class="widget-content">
                 <div class="table-responsive">
-                    <table class="table table-bordered mb-4">
+                    <table class="table mb-4">
+                        <caption>List of all users</caption>
                         <thead>
                         <tr>
+                            <th class="text-center">#</th>
                             <th>Name</th>
-                            <th>Date</th>
-                            <th>Sale</th>
-                            <th class="text-center">Status</th>
-                            <th></th>
+                            <th>Email</th>
+                            <th class="">Status</th>
+                            <th>Register</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Shaun Park</td>
-                            <td>10/08/2019</td>
-                            <td>320</td>
-                            <td class="text-center"><span class="text-success">Complete</span></td>
-                            <td class="text-center"><svg> ... </svg></td>
+                            <td class="text-center">1</td>
+                            <td class="text-primary">Shaun Park</td>
+                            <td>johndoe@yahoo.com</td>
+                            <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
+                            <td>5 min ago</td>
                         </tr>
                         <tr>
-                            <td>Alma Clarke</td>
-                            <td>11/08/2019</td>
-                            <td>420</td>
-                            <td class="text-center"><span class="text-secondary">Pending</span></td>
-                            <td class="text-center"><svg> ... </svg></td>
+                            <td class="text-center">2</td>
+                            <td class="text-primary">Andy King</td>
+                            <td>andyking@gmail.com</td>
+                            <td class=""><span class="badge outline-badge-secondary shadow-none">Pending</span></td>
+                            <td>10 min ago</td>
                         </tr>
                         <tr>
-                            <td>Xavier</td>
-                            <td>12/08/2019</td>
-                            <td>130</td>
-                            <td class="text-center"><span class="text-info">In progress</span></td>
-                            <td class="text-center"><svg> ... </svg></td>
+                            <td class="text-center">3</td>
+                            <td class="text-primary">Mary McDonald</td>
+                            <td>lisadoe@live.com</td>
+                            <td class=""><span class="badge outline-badge-info shadow-none">In Progress</span></td>
+                            <td>1 hour ago</td>
                         </tr>
                         <tr>
-                            <td>Vincent Carpenter</td>
-                            <td>13/08/2019</td>
-                            <td>260</td>
-                            <td class="text-center"><span class="text-danger">Canceled</span></td>
-                            <td class="text-center"><svg> ... </svg></td>
+                            <td class="text-center">4</td>
+                            <td class="text-primary">Vincent Carpenter</td>
+                            <td>vinnyc@outlook.com</td>
+                            <td class=""><span class="badge outline-badge-danger shadow-none">Cancel</span></td>
+                            <td>1 day ago</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
+
             </div>
         </div>
     </div>
