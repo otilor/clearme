@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class StudentDetailsSeeder extends Seeder
@@ -13,6 +14,9 @@ class StudentDetailsSeeder extends Seeder
      */
     public function run()
     {
-        Student::factory()->count(10)->create();
+        for ($i = 0; $i < 10 ; $i++) {
+            $user = User::factory()->create();
+            $user->assignRole('student');
+        }
     }
 }
