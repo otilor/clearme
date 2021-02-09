@@ -29,7 +29,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th class="">Status</th>
-                            <th>Register</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
