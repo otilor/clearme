@@ -3,10 +3,13 @@
 namespace Tests\Feature;
 
 use Database\Seeders\StudentSeeder;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class StudentSeederTest extends TestCase
 {
+    protected $seed = true;
     /**
      * Test that student data can be seeded
      *
@@ -15,6 +18,8 @@ class StudentSeederTest extends TestCase
      */
     public function student_data_can_be_seeded()
     {
-        $seeder = $this->seed(StudentSeeder::class);
+        $this->seed(StudentSeeder::class)->assertDatabaseHas('users', [
+            'email' => 'pfarrell@example.org'
+        ]);
     }
 }
