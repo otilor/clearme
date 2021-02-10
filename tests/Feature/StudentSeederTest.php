@@ -18,6 +18,7 @@ class StudentSeederTest extends TestCase
      */
     public function student_data_can_be_seeded()
     {
+        // TODO: fix failing test
         $this->seed(StudentSeeder::class)->assertDatabaseHas('users', [
             'email' => 'pfarrell@example.org'
         ]);
