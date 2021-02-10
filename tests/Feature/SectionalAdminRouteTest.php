@@ -14,10 +14,10 @@ class SectionalAdminRouteTest extends TestCase
      * @test
      * @return void
      */
-    public function user_can_visit_sectional_admin_home_page()
+    public function user_can_visit_sectional_admin_dashboard()
     {
         $this->withoutMiddleware();
-        $response = $this->get('/sectional_admin');
+        $response = $this->get(route('sectional_admin.dashboard'));
 
         $response->assertStatus(200);
     }
