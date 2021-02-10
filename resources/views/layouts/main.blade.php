@@ -178,7 +178,13 @@
     // })
 
     function logout() {
-        alert("Hello Gabriel");
+        var hiddenValue = $('#csrfToken').val();
+        $.post('/logout', {
+            _token: hiddenValue,
+        }).then(function () {
+            //
+        })
+        window.location.href = "/login";
     }
     $(document).ready(function() {
         App.init();
