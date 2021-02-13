@@ -1,3 +1,4 @@
+
 {
     "name": "laravel/laravel",
     "type": "project",
@@ -8,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "calebporzio/onboard": "^1.7",
         "doctrine/dbal": "^3.0",
         "fideloper/proxy": "^4.4",
