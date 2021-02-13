@@ -25,6 +25,7 @@ class SetupCommand extends Command
         $progressBar->start();
 
         $output->writeln(PHP_EOL . 'Setting up project 🚀🚀');
+        exec('php artisan migrate');
         $i = 0;
         while ($i++ < 5) {
             // Clear permission cache
