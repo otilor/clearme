@@ -16,8 +16,9 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        if (! User::where('email', 'admin@clearme.test')) {
-            $user = User::create(['name' => 'Administrator', 'email' => 'admin@clearme.test', 'password' => Hash::make('@dm1nt3st')]);
+        $adminEmail = 'admin@clearme.test';
+        if (! User::where('email', $adminEmail)) {
+            $user = User::create(['name' => 'Administrator', 'email' => $adminEmail, 'password' => Hash::make('@dm1nt3st')]);
             $user->assignRole('admin');
         }
     }
