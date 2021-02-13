@@ -11,18 +11,12 @@ class SendAdminInviteMail extends Mailable
     use Queueable, SerializesModels;
 
     /**
-     * @var $data
-     */
-    private $data;
-
-    /**
      * Create a new message instance.
      *
      * @param $data
      */
-    public function __construct($data)
+    public function __construct(private $data)
     {
-        $this->data = $data;
     }
 
     /**
