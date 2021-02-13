@@ -27,6 +27,14 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware(['auth']);
 
+Route::get('auto-login', function () {
+    abort_unless(app()->environment('local'), 403);
+
+    \auth()->login(User::where('email', 'admin@clearme.test')->first());
+
+    return redirect()->to('/');
+})->name('dev-login');
+
 /** @var Router $router */
 
 $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function () use ($router) {
