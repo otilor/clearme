@@ -130,6 +130,9 @@
     <!--  BEGIN CONTENT PART  -->
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
+            <form id="logout-form" action="/logout" method="post">
+                @csrf
+            </form>
 
             <div class="row layout-top-spacing">
                 @yield('content')
@@ -165,30 +168,9 @@
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
 <script>
-    // const logout = document.getElementById('logoutLink')
-    // logout.addEventListener('click', event => {
-    //     event.preventDefault()
-    //     var hv =  $('#csrfToken').val();
-    //     $.post('/logout', {
-    //         _token: hv,
-    //     }).then(function () {
-    //         //
-    //     })
-    //     window.location.href = "/login";
-    // })
-
     function logout() {
-        var hiddenValue = $('#csrfToken').val();
-        $.post('/logout', {
-            _token: hiddenValue,
-        }).then(function () {
-            //
-        })
-        window.location.href = "/login";
+        document.getElementById('logout-form').submit();
     }
-    $(document).ready(function() {
-        App.init();
-    });
 </script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
