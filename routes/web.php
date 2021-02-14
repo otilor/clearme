@@ -30,7 +30,7 @@ Route::get('/', function () {
 Route::get('auto-login', function () {
     abort_unless(app()->environment('local'), 403);
 
-    \auth()->login(User::where('email', 'admin@clearme.test')->first());
+    \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
 
     return redirect()->to('/');
 })->name('dev-login');
