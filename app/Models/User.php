@@ -51,11 +51,6 @@ class User extends Authenticatable
         return ['user' => $user, 'unhashedPassword' => $password];
     }
 
-    protected function profile()
-    {
-        return $this->hasOne(Profile::class);
-    }
-
     public function isComplete()
     {
 
