@@ -36,8 +36,8 @@ class InviteController extends Controller
             dispatch(new SendMail($request->email, (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($section_id)]));
 
             notify('success')->success("Contacted {$request->email} via mail");
-
-            return redirect(route('admin.dashboard'));
         });
+
+        return redirect(route('admin.dashboard'));
     }
 }
