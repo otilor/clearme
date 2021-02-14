@@ -34,9 +34,7 @@ class InviteController extends Controller
             // Assign role to user
             $user->assignRole('sectional_admin');
 
-            $data = (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($request->section_id)];
-
-            dispatch(new SendMail($request->email, $data));
+            dispatch(new SendMail($request->email, (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($request->section_id)]));
 
             notify('success')->success("Contacted {$request->email} via mail");
 
