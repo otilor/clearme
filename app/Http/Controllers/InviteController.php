@@ -23,7 +23,7 @@ class InviteController extends Controller
     {
         $section_id = $request->section_id;
         // TODO: add tests
-        DB::transaction(function () use ($section_id){
+        DB::transaction(function () use ($section_id, $request){
             AdminInvite::create([
                 'section_id' => $section_id,
                 'status' => AdminInvite::PENDING
