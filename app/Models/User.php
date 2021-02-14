@@ -50,4 +50,9 @@ class User extends Authenticatable
         $user->assignRole('actor');
         return ['user' => $user, 'unhashedPassword' => $password];
     }
+
+    public function clearanceRequest(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(ClearanceRequest::class);
+    }
 }

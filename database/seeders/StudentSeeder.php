@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\ClearanceRequest;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class StudentSeeder extends Seeder
 {
@@ -15,8 +17,11 @@ class StudentSeeder extends Seeder
     public function run()
     {
         for ($i = 0; $i < 10 ; $i++) {
-            $user = User::factory()->create();
-            $user->assignRole('student');
+            DB::transaction(function () {
+                $user = User::factory()->create();
+                ClearanceRequest::create(['user_id'=> $user->id]);
+                $user->assignRole('student');
+            });
         }
     }
 }
