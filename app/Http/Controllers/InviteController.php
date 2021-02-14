@@ -21,18 +21,16 @@ class InviteController extends Controller
 
     public function send(SendAdminInviteMailRequest $request)
     {
+        // TODO: add tests
         DB::transaction(function () {
             AdminInvite::create([
                 'section_id' => $section_id,
                 'status' => AdminInvite::PENDING
             ]);
 
-            $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)]);
-
             $unhashedPassword = Str::random(8);
 
-            // Assign role to user
-            $user->assignRole('sectional_admin');
+            $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)])?->assignRole('sectional_admin');
 
             dispatch(new SendMail($request->email, (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($request->section_id)]));
 
@@ -40,6 +38,5 @@ class InviteController extends Controller
 
             return redirect(route('admin.dashboard'));
         });
-        // TODO: add tests
     }
 }
