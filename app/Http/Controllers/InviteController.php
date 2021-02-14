@@ -21,8 +21,9 @@ class InviteController extends Controller
 
     public function send(SendAdminInviteMailRequest $request)
     {
+        $section_id = $request->section_id;
         // TODO: add tests
-        DB::transaction(function () {
+        DB::transaction(function () use ($section_id){
             AdminInvite::create([
                 'section_id' => $section_id,
                 'status' => AdminInvite::PENDING
@@ -32,7 +33,7 @@ class InviteController extends Controller
 
             $user = User::create(['name' => 'Administrator', 'email' => $request->email, 'password' => bcrypt($unhashedPassword)])?->assignRole('sectional_admin');
 
-            dispatch(new SendMail($request->email, (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($request->section_id)]));
+            dispatch(new SendMail($request->email, (object)['user' => $user, 'unhashedPassword' => $unhashedPassword, 'section' => Section::find($section_id)]));
 
             notify('success')->success("Contacted {$request->email} via mail");
 
