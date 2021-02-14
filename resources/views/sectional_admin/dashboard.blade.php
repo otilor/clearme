@@ -33,6 +33,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @forelse($students as $student)
                         <tr>
                             <td class="text-center">1</td>
                             <td class="text-primary">Shaun Park</td>
@@ -40,27 +41,9 @@
                             <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                             <td><button class="btn btn-success">Approve</button></td>
                         </tr>
-                        <tr>
-                            <td class="text-center">2</td>
-                            <td class="text-primary">Andy King</td>
-                            <td>andyking@gmail.com</td>
-                            <td class=""><span class="badge outline-badge-secondary shadow-none">Pending</span></td>
-                            <td><button class="btn btn-success">Approve</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">3</td>
-                            <td class="text-primary">Mary McDonald</td>
-                            <td>lisadoe@live.com</td>
-                            <td class=""><span class="badge outline-badge-info shadow-none">In Progress</span></td>
-                            <td><button class="btn btn-success">Approve</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center">4</td>
-                            <td class="text-primary">Vincent Carpenter</td>
-                            <td>vinnyc@outlook.com</td>
-                            <td class=""><span class="badge outline-badge-danger shadow-none">Cancel</span></td>
-                            <td><button class="btn btn-success">Approve</button></td>
-                        </tr>
+                        @empty
+                            <p>No student here!</p>
+                        @endforelse
                         </tbody>
                     </table>
                 </div>
