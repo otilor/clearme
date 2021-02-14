@@ -36,8 +36,8 @@
                         @forelse($students as $student)
                         <tr>
                             <td class="text-center">1</td>
-                            <td class="text-primary">Shaun Park</td>
-                            <td>johndoe@yahoo.com</td>
+                            <td class="text-primary">{{ $student->name }}</td>
+                            <td>{{ $student->email }}</td>
                             <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                             <td><button class="btn btn-success">Approve</button></td>
                         </tr>
