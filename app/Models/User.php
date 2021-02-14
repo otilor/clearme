@@ -50,9 +50,4 @@ class User extends Authenticatable
         $user->assignRole('actor');
         return ['user' => $user, 'unhashedPassword' => $password];
     }
-
-    public function isComplete()
-    {
-
-    }
 }
