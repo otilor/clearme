@@ -35,7 +35,7 @@
                         <tbody>
                         @forelse($students as $student)
                         <tr>
-                            <td class="text-center">1</td>
+                            <td class="text-center">{{ $student->id }}</td>
                             <td class="text-primary">{{ $student->name }}</td>
                             <td>{{ $student->email }}</td>
                             <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
