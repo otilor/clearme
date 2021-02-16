@@ -14,4 +14,9 @@ class ClearanceRequest extends Model
         'current_section',
         'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
