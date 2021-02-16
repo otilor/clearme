@@ -65,9 +65,7 @@ $router->get('/dashboard', function () {
 })->middleware(['auth']);
 
 $router->group(['prefix' => 'clearance'], function () use ($router){
-    $router->post('approve/{id}', function ($id){
-        return "Approved " . $id;
-    });
+    $router->post('approve/{id}', [\App\Http\Controllers\ClearanceRequestController::class, 'update']);
 });
 
 Auth::routes(['register' => false]);
