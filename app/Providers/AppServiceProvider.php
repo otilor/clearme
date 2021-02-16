@@ -26,11 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        OnboardFacade::addStep('To Complete your registration, kindly complete your profile')
-            ->link('/profile')
-            ->cta('Complete')
-            ->completeIf(function (User $user) {
-                return $user->find(Auth::id())->profile->isComplete();
-            });
+        //
     }
 }

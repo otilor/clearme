@@ -166,7 +166,6 @@ return [
          * Package Service Providers...
          */
 
-        \Calebporzio\Onboard\OnboardServiceProvider::class,
         \Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
         \Barryvdh\Debugbar\ServiceProvider::class,
 
@@ -218,7 +217,6 @@ return [
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
-        \Calebporzio\Onboard\OnboardFacade::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
