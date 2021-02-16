@@ -20,6 +20,29 @@
 
             {{--                TODO: add icons--}}
             <div class="widget-content">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">State reason</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="modal-text">Leave the student with a message</p>
+                                <textarea class="row col-12" placeholder="Why do you want to reject this application?" autofocus></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#exampleModal">
+                    Launch modal
+                </button>
                 <div class="table-responsive">
                     <table class="table mb-4">
                         <caption>List of all students who need clearance</caption>
@@ -41,11 +64,9 @@
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                                 <td>
                                     @if($students[$i]->clearanceRequest->is_cleared)
-                                        <form action="/clearance/reject/{{$students[$i]->id}}" method="post">
                                             <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
                                             @csrf
-                                            <button class="btn btn-danger btn-rounded" type="submit">Reject</button>
-                                        </form>
+                                            <button class="btn btn-danger btn-rounded" type="submit"  data-toggle="modal" data-target="#exampleModal">Reject</button>
                                     @else
                                         <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                             <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
