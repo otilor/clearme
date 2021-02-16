@@ -22,7 +22,7 @@
             <div class="widget-content">
                 <div class="table-responsive">
                     <table class="table mb-4">
-                        <caption>List of all users</caption>
+                        <caption>List of all students who need clearance</caption>
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
@@ -33,17 +33,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($students as $student)
-                        <tr>
-                            <td class="text-center">{{ $student->id }}</td>
-                            <td class="text-primary">{{ $student->name }}</td>
-                            <td>{{ $student->email }}</td>
-                            <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
-                            <td><button class="btn btn-success">Approve</button></td>
-                        </tr>
-                        @empty
+                        @for($i = 0; $i<$students->count(); $i++)
+                            <tr>
+                                <td class="text-center">{{ $i+1 }}</td>
+                                <td class="text-primary">{{ $students[$i]->name }}</td>
+                                <td>{{ $students[$i]->email }}</td>
+                                <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
+                                <td><button class="btn btn-success">Approve</button></td>
+                            </tr>
+                        @endfor
+
+                        @empty($students)
                             <p>No student here!</p>
-                        @endforelse
+                        @endempty
                         </tbody>
                     </table>
                 </div>
