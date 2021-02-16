@@ -43,7 +43,11 @@
                                     <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                         @csrf
                                         <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
-                                        <button class="btn btn-success" type="submit">Approve</button>
+                                        @if($students[$i]->clearanceRequest->is_cleared)
+                                            <button class="btn btn-danger" type="submit">Reject</button>
+                                        @else
+                                            <button class="btn btn-success" type="submit">Approve</button>
+                                        @endif
                                     </form>
                                 </td>
                             </tr>
