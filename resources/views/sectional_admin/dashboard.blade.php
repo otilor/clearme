@@ -39,7 +39,13 @@
                                 <td class="text-primary">{{ $students[$i]->name }}</td>
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
-                                <td><button class="btn btn-success">Approve</button></td>
+                                <td>
+                                    <form>
+                                        @csrf
+                                        <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+                                        <button class="btn btn-success" type="submit">Approve</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endfor
 
