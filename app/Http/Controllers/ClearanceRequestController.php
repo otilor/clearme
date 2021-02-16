@@ -17,6 +17,7 @@ class ClearanceRequestController extends Controller
         notify()->success("Student {$clearanceRequest->user?->name} has been cleared");
         return back();
     }
+
     public function reject(Request $request)
     {
         $clearanceRequest = ClearanceRequest::where('user_id', $request->student_id)
