@@ -56,6 +56,7 @@ $router->group(['middleware' => 'auth'], function () use ($router){
 
     $router->group(['prefix' => 'clearance', 'middleware'], function () use ($router){
         $router->post('approve/{id}', [\App\Http\Controllers\ClearanceRequestController::class, 'update']);
+        $router->post('reject/{id}', [\App\Http\Controllers\ClearanceRequestController::class, 'reject']);
     });
 
     $router->get('/dashboard', function () {

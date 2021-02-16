@@ -3,7 +3,7 @@
 @section('pageTitle', 'Dashboard')
 
 @section('content')
-    <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css"/>
 
     <div class="mx-auto text-center col-lg-12 layout-spacing">
         {{--            <form action="clearance/start" method="post">--}}
@@ -40,17 +40,19 @@
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                                 <td>
-                                        @csrf
-                                        <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
-                                        @if($students[$i]->clearanceRequest->is_cleared)
-                                        <form action="#" method="post">
-                                                <button class="btn btn-danger" type="submit">Reject</button>
-                                            </form>
-                                        @else
-                                            <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
-                                                <button class="btn btn-success" type="submit">Approve</button>
-                                            </form>
-                                        @endif
+                                    @if($students[$i]->clearanceRequest->is_cleared)
+                                        <form action="/clearance/reject/{{$students[$i]->id}}" method="post">
+                                            <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+                                            @csrf
+                                            <button class="btn btn-danger" type="submit">Reject</button>
+                                        </form>
+                                    @else
+                                        <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
+                                            <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+                                            @csrf
+                                            <button class="btn btn-success" type="submit">Approve</button>
+                                        </form>
+                                    @endif
                                 </td>
                             </tr>
                         @endfor
