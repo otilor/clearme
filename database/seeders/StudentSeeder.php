@@ -16,6 +16,10 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
+        $studentEmail = 'student@clearme.test';
+        if (! User::where('email', $studentEmail)->first()) {
+            User::factory(['email' => $studentEmail])->create()->assignRole('student');
+        }
         for ($i = 0; $i < 10 ; $i++) {
             DB::transaction(function () {
                 $user = User::factory()->create();
