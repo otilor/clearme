@@ -40,9 +40,6 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mb-2 mr-2" data-toggle="modal" data-target="#exampleModal">
-                    Launch modal
-                </button>
                 <div class="table-responsive">
                     <table class="table mb-4">
                         <caption>List of all students who need clearance</caption>
