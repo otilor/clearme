@@ -40,7 +40,7 @@
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                                 <td>
-                                    <form>
+                                    <form action="/clearance/approve" method="post">
                                         @csrf
                                         <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
                                         <button class="btn btn-success" type="submit">Approve</button>

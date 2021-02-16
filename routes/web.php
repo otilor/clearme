@@ -64,5 +64,10 @@ $router->get('/dashboard', function () {
     }
 })->middleware(['auth']);
 
+$router->group(['prefix' => 'clearance'], function () use ($router){
+    $router->post('approve', function () {
+        return "Approved";
+    });
+});
 
 Auth::routes(['register' => false]);
