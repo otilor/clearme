@@ -40,15 +40,17 @@
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
                                 <td>
-                                    <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                         @csrf
                                         <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
                                         @if($students[$i]->clearanceRequest->is_cleared)
-                                            <button class="btn btn-danger" type="submit">Reject</button>
+                                        <form action="#" method="post">
+                                                <button class="btn btn-danger" type="submit">Reject</button>
+                                            </form>
                                         @else
-                                            <button class="btn btn-success" type="submit">Approve</button>
+                                            <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
+                                                <button class="btn btn-success" type="submit">Approve</button>
+                                            </form>
                                         @endif
-                                    </form>
                                 </td>
                             </tr>
                         @endfor
