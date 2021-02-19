@@ -76,6 +76,10 @@ $router->group(['middleware' => 'auth'], function () use ($router){
         if (Auth::user()->hasRole('sectional_admin')) {
             return redirect(\route('sectional_admin.dashboard'));
         }
+
+        if (Auth::user()->hasRole('student')) {
+            return redirect(\route('student.dashboard'));
+        }
     });
 });
 
