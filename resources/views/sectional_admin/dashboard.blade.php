@@ -31,10 +31,22 @@
                                 <td class="text-center">{{ $i+1 }}</td>
                                 <td class="text-primary">{{ $students[$i]->name }}</td>
                                 <td>{{ $students[$i]->email }}</td>
-                                <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
+                                <td class="">
+                                    @if($students[$i]->clearanceRequest->is_cleared)
+                                    <button class="btn btn-success">
+                                        Approved
+                                    </button>
+                                    @else
+                                        <span class=" shadow-none badge outline-badge-primary">
+                                            Complete
+                                        </span>
+                                    @endif
+                                </td>
                                 <td>
                                     @if($students[$i]->clearanceRequest->is_cleared)
-                                            <button class="btn btn-danger btn-rounded" type="submit"  data-toggle="modal" data-target="#exampleModal">Reject</button>
+                                        <span class="badge outline-badge-danger">
+                                            Cancel
+                                        </span>
                                     @else
                                         <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                             <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
