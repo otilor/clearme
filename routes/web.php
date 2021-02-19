@@ -27,13 +27,22 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware(['auth']);
 
-Route::get('auto-login', function () {
+Route::group(['prefix' => 'auto-login'], function () {
     abort_unless(app()->environment('local'), 403);
+    Route::get('/', function () {
 
-    \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
 
-    return redirect()->to('/');
-})->name('dev-login');
+        return redirect()->to('/');
+    })->name('dev-login');
+
+    Route::get('student', function () {
+        \auth()->login(User::where('email', 'student@clearme.test')->first()->assignRole(['student']));
+
+        return redirect()->to('/student/dashboard');
+    })->name('student-dev-login');
+});
+
 
 /** @var Router $router */
 
