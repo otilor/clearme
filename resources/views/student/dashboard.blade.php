@@ -4,7 +4,10 @@
 
 @section('content')
     <link href="{{ asset('assets/css/components/timeline/custom-timeline.css') }}" rel="stylesheet" type="text/css"/>
-        <div class="mx-auto text-center col-lg-12 layout-spacing">
+    <link href="{{ assert('assets/plugins/drag-and-drop/dragula/dragula.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ assert('assets/plugins/drag-and-drop/dragula/example.css') }}" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL STYLES -->
+    <div class="mx-auto text-center col-lg-12 layout-spacing">
 
                 <div id="timelineBasic" class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
@@ -84,7 +87,6 @@
 
                             <div class="code-section-container">
 
-                                <button class="btn btn-danger"><span>Stop</span></button>
                                 <button class="btn btn-success"><span>Print out</span></button>
 
 
