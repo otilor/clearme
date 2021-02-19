@@ -44,9 +44,9 @@
                                 </td>
                                 <td>
                                     @if($students[$i]->clearanceRequest->is_cleared)
-                                        <span class="badge outline-badge-danger">
+                                        <a href="#" class="badge outline-badge-danger">
                                             Cancel
-                                        </span>
+                                        </a>
                                     @else
                                         <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                             <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
