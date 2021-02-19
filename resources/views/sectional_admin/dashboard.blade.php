@@ -37,8 +37,8 @@
                                         Approved
                                     </button>
                                     @else
-                                        <span class=" shadow-none badge outline-badge-primary">
-                                            Complete
+                                        <span class=" shadow-none badge outline-badge-dark">
+                                            Pending
                                         </span>
                                     @endif
                                 </td>
