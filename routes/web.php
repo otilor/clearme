@@ -80,6 +80,8 @@ $router->group(['middleware' => 'auth'], function () use ($router){
         if (Auth::user()->hasRole('student')) {
             return redirect(\route('student.dashboard'));
         }
+
+        abort(403);
     });
 });
 
