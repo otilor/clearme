@@ -6,13 +6,6 @@
     <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css"/>
 
     <div class="mx-auto text-center col-lg-12 layout-spacing">
-        {{--            <form action="clearance/start" method="post">--}}
-        {{--                @csrf--}}
-        {{--                <input class="btn btn-lg btn-primary" type="submit" value="Begin clearance">--}}
-        {{--                --}}
-        {{--            </form>--}}
-
-
         <div class="widget widget-table-one">
             <div class="widget-heading">
                 <h5 class="">Students pending clearance</h5>
