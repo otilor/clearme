@@ -33,7 +33,7 @@
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class="">
                                     @if($students[$i]->clearanceRequest->is_cleared)
-                                    <button class="btn btn-success">
+                                    <button class="btn btn-dark btn-rounded">
                                         Approved
                                     </button>
                                     @else
@@ -51,7 +51,7 @@
                                         <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
                                             <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
                                             @csrf
-                                            <button class="btn btn-success btn-rounded" type="submit">Approve</button>
+                                            <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
                                     @endif
                                 </td>
