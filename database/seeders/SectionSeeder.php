@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Section;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Schema;
 
 class SectionSeeder extends Seeder
@@ -23,8 +24,11 @@ class SectionSeeder extends Seeder
             'Medicals',
             'Bursary department'
         ];
-        foreach ($sections as $section) {
-            Section::create(['name' => $section]);
+        if (! Section::where('name', Arr::random($sections))->first()) {
+            foreach ($sections as $section) {
+                Section::create(['name' => $section]);
+            }
         }
+
     }
 }

@@ -7,79 +7,25 @@ use Illuminate\Http\Request;
 
 class ClearanceRequestController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function update(Request $request)
     {
-        //
+        $clearanceRequest = ClearanceRequest::where('user_id', $request->student_id)
+            ->first();
+
+        $clearanceRequest->update(['is_cleared' => true]);
+
+        notify()->success("Student {$clearanceRequest->user?->name} has been cleared");
+        return back();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function reject(Request $request)
     {
-        //
-    }
+        $clearanceRequest = ClearanceRequest::where('user_id', $request->student_id)
+            ->first();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $clearanceRequest->update(['is_cleared' => false]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ClearanceRequest  $clearanceRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ClearanceRequest $clearanceRequest)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ClearanceRequest  $clearanceRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ClearanceRequest $clearanceRequest)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ClearanceRequest  $clearanceRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, ClearanceRequest $clearanceRequest)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ClearanceRequest  $clearanceRequest
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ClearanceRequest $clearanceRequest)
-    {
-        //
+        notify()->error("Student has been rejected");
+        return back();
     }
 }

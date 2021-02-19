@@ -16,6 +16,12 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
+        $studentEmail = 'student@clearme.test';
+        if (! User::where('email', $studentEmail)->first()) {
+            $user = User::factory(['email' => $studentEmail])->create()->assignRole('student');
+            // TODO: write test to ensure all students have a clearance request
+            ClearanceRequest::create(['user_id'=> $user->id]);
+        }
         for ($i = 0; $i < 10 ; $i++) {
             DB::transaction(function () {
                 $user = User::factory()->create();

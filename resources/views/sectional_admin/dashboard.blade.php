@@ -3,7 +3,7 @@
 @section('pageTitle', 'Dashboard')
 
 @section('content')
-    <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css"/>
 
     <div class="mx-auto text-center col-lg-12 layout-spacing">
         {{--            <form action="clearance/start" method="post">--}}
@@ -39,7 +39,17 @@
                                 <td class="text-primary">{{ $students[$i]->name }}</td>
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class=""><span class=" shadow-none badge outline-badge-primary">Complete</span></td>
-                                <td><button class="btn btn-success">Approve</button></td>
+                                <td>
+                                    @if($students[$i]->clearanceRequest->is_cleared)
+                                            <button class="btn btn-danger btn-rounded" type="submit"  data-toggle="modal" data-target="#exampleModal">Reject</button>
+                                    @else
+                                        <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
+                                            <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+                                            @csrf
+                                            <button class="btn btn-success btn-rounded" type="submit">Approve</button>
+                                        </form>
+                                    @endif
+                                </td>
                             </tr>
                         @endfor
 

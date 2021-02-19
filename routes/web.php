@@ -37,32 +37,37 @@ Route::get('auto-login', function () {
 
 /** @var Router $router */
 
-$router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function () use ($router) {
-    $router->get('dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
-});
+$router->group(['middleware' => 'auth'], function () use ($router){
+    $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function () use ($router) {
+        $router->get('dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
+    });
 
-$router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
-    $router->get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    $router->group(['prefix' => 'sections'], function () use ($router) {
-        $router->get('{section}/invite', [InviteController::class, 'invite']);
-        $router->post('{section}/invite', [InviteController::class, 'send']);
+    $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {
+        $router->get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        $router->group(['prefix' => 'sections'], function () use ($router) {
+            $router->get('{section}/invite', [InviteController::class, 'invite']);
+            $router->post('{section}/invite', [InviteController::class, 'send']);
+        });
+    });
+
+    $router->group(['prefix' => 'sectional_admin'], function () use ($router) {
+        $router->get('/dashboard', [SectionalAdminController::class, 'dashboard'])->middleware(['auth', 'role:sectional_admin'])->name('sectional_admin.dashboard');
+    });
+
+    $router->group(['prefix' => 'clearance', 'middleware'], function () use ($router){
+        $router->post('approve/{id}', [\App\Http\Controllers\ClearanceRequestController::class, 'update']);
+        $router->post('reject/{id}', [\App\Http\Controllers\ClearanceRequestController::class, 'reject']);
+    });
+
+    $router->get('/dashboard', function () {
+        if (Auth::user()->hasRole('admin')) {
+            return redirect(\route('admin.dashboard'));
+        }
+
+        if (Auth::user()->hasRole('sectional_admin')) {
+            return redirect(\route('sectional_admin.dashboard'));
+        }
     });
 });
-
-$router->group(['prefix' => 'sectional_admin'], function () use ($router) {
-    $router->get('/dashboard', [SectionalAdminController::class, 'dashboard'])->middleware(['auth', 'role:sectional_admin'])->name('sectional_admin.dashboard');
-});
-
-
-$router->get('/dashboard', function () {
-    if (Auth::user()->hasRole('admin')) {
-        return redirect(\route('admin.dashboard'));
-    }
-
-    if (Auth::user()->hasRole('sectional_admin')) {
-        return redirect(\route('sectional_admin.dashboard'));
-    }
-})->middleware(['auth']);
-
 
 Auth::routes(['register' => false]);

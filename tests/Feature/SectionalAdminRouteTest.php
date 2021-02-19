@@ -29,7 +29,7 @@ class SectionalAdminRouteTest extends TestCase
     public function authenticated_user_can_visit_sectional_admin_home_page()
     {
         $this->withoutMiddleware(['role:sectional_admin']);
-        $response = $this->get('/sectional_admin');
+        $response = $this->get(route('sectional_admin.dashboard'));
 
         $response->assertStatus(302);
     }
