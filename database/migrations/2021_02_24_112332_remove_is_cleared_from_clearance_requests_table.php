@@ -13,8 +13,10 @@ class RemoveIsClearedFromClearanceRequestsTable extends Migration
      */
     public function up()
     {
-      Schema::table($tableName = 'clearance_requests', function (Blueprint $table) {
-           $table->dropColumn('is_cleared');
+      Schema::table($tableName = 'clearance_requests', function (Blueprint $table) use($tableName){
+          if (Schema::hasColumn($tableName, 'is_cleared')) {
+              $table->dropColumn('is_cleared');
+          }
        });
     }
 
