@@ -11,7 +11,7 @@ class ClearanceRequest extends Model
 
     protected $fillable = [
         'is_cleared',
-        'current_section',
+        'current_phase',
         'student_id'
     ];
 
