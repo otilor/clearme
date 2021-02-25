@@ -15,9 +15,7 @@ class ChangeCurrentPhaseFromJsonColumnToAForeignKey extends Migration
     {
         Schema::table($tableName = 'clearance_requests', function (Blueprint $table) use ($tableName){
             $column = 'current_phase';
-            if (Schema::hasColumn($tableName, $column)) {
-                $table->unsignedBigInteger($column)->change();
-            }
+            Schema::hasColumn($tableName, $column) ? $table->unsignedBigInteger($column)->change() : abort(500);
         });
     }
 
