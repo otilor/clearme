@@ -25,7 +25,7 @@ class StudentSeeder extends Seeder
         for ($i = 0; $i < 10 ; $i++) {
             DB::transaction(function () {
                 $user = User::factory()->create();
-                ClearanceRequest::create(['user_id'=> $user->id]);
+                ClearanceRequest::create(['student_id'=> $user->id]);
                 $user->assignRole('student');
             });
         }
