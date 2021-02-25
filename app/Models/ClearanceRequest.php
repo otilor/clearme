@@ -12,7 +12,7 @@ class ClearanceRequest extends Model
     protected $fillable = [
         'is_cleared',
         'current_section',
-        'user_id'
+        'student_id'
     ];
 
     public function user()
