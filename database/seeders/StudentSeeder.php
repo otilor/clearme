@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\ClearanceRequest;
+use App\Models\Section;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -20,12 +21,12 @@ class StudentSeeder extends Seeder
         if (! User::where('email', $studentEmail)->first()) {
             $user = User::factory(['email' => $studentEmail])->create()->assignRole('student');
             // TODO: write test to ensure all students have a clearance request
-            ClearanceRequest::create(['student_id'=> $user->id]);
+            ClearanceRequest::create(['student_id'=> $user->id, 'current_phase' => Section::first()->id]);
         }
         for ($i = 0; $i < 10 ; $i++) {
             DB::transaction(function () {
                 $user = User::factory()->create();
-                ClearanceRequest::create(['student_id'=> $user->id]);
+                ClearanceRequest::create(['student_id'=> $user->id, 'current_phase' => Section::first()->id]);
                 $user->assignRole('student');
             });
         }
