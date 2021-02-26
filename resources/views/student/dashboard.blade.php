@@ -25,6 +25,8 @@
             </div>
 
             {{--                TODO: add icons--}}
+            @isset($clearanceRequest->passed_phases)
+                @foreach($clearanceRequest->passed_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
                         <div class="t-item">
@@ -46,6 +48,8 @@
                         </div>
                     </div>
             </div>
+                @endforeach
+            @endisset
         </div>
     </div>
 @endsection
