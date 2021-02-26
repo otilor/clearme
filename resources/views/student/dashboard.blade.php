@@ -26,6 +26,7 @@
 
             {{--                TODO: add icons--}}
             @isset($clearanceRequest->passed_phases)
+                Passed phases
                 @foreach($clearanceRequest->passed_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
@@ -37,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>A section</h4>
+                                    <h4>{{ $phase->passed_phases }}</h4>
                                     {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                 </div>
 
