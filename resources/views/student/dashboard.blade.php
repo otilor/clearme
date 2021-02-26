@@ -24,6 +24,29 @@
                 <h5 class="">Timeline of clearance process</h5>
             </div>
 
+                Current_phase
+                    <div class="widget-content">
+                        <div class="transactions-list">
+                            <div class="t-item">
+                                <div class="t-company-name">
+                                    <div class="t-icon">
+                                        <div class="icon bg-success text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        </div>
+                                    </div>
+                                    <div class="t-name">
+                                        <h4>{{ $clearanceRequest->current_phase }}</h4>
+                                        {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
+                                    </div>
+
+                                </div>
+                                <div class="t-rate rate-dec">
+                                    <span class="badge outline-badge-success"> Cleared </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
             {{--                TODO: add icons--}}
             @isset($clearanceRequest->passed_phases)
                 Passed phases
