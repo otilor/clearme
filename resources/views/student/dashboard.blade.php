@@ -26,7 +26,7 @@
 
             {{--                TODO: add icons--}}
             @isset($clearanceRequest->passed_phases)
-                @foreach($clearanceRequest->passed_phases as $phase)
+                @foreach($phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
                         <div class="t-item">
