@@ -41,6 +41,12 @@ Route::group(['prefix' => 'auto-login'], function () {
 
         return redirect()->to('/student/dashboard');
     })->name('student-dev-login');
+
+    Route::get('sectional-admin', function () {
+        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+
+        return redirect()->to(\route('sectional_admin.dashboard'));
+    })->name('sectional-admin-dev-login');
 });
 
 
