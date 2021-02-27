@@ -11,7 +11,7 @@ class SectionalAdminController extends Controller
 {
     public function dashboard()
     {
-        $students = User::role('student')->get()->load('clearanceRequest');
+        $students = User::notRole(['admin', 'sectional_admin'])->get();
         return view('sectional_admin.dashboard', compact('students'));
     }
 }
