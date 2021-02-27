@@ -18,7 +18,7 @@ class ClearanceRequest extends Model
 
     protected $casts = [
         'passed_phases' => 'array',
-        'current_phases' => 'array',
+        'other_phases' => 'array',
     ];
 
     public function user()
@@ -29,15 +29,5 @@ class ClearanceRequest extends Model
     public function getCurrentPhaseAttribute($value)
     {
         return Section::find($value);
-    }
-
-    public function getPassedPhasesAttribute($value)
-    {
-        return (array) $value;
-    }
-
-    public function getOtherPhasesAttribute($value)
-    {
-        return (array) $value;
     }
 }
