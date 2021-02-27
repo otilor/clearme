@@ -25,4 +25,14 @@ class ClearanceRequest extends Model
     {
         return Section::find($value);
     }
+
+    public function getPassedPhasesAttribute($value)
+    {
+        return (array) $value;
+    }
+
+    public function getOtherPhasesAttribute($value)
+    {
+        return (array) $value;
+    }
 }
