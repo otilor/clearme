@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ClearanceRequest;
 use App\Models\Section;
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\Job;
 
 class StudentController extends Controller
 {

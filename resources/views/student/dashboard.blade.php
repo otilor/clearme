@@ -44,15 +44,15 @@
                     </div>
         </div>
 
-
+        @isset($clearanceRequest->passed_phases)
         <div class="widget widget-table-one my-2">
             <div class="widget-heading">
                 <h5 class="">Passed phase</h5>
             </div>
 
             {{--                TODO: add icons--}}
-            @isset($clearanceRequest->passed_phases)
-                @foreach($clearanceRequest->passed_phases as $phase)
+
+                @forelse($clearanceRequest->passed_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
                         <div class="t-item">
@@ -71,17 +71,21 @@
                         </div>
                     </div>
             </div>
-                @endforeach
-            @endisset
-        </div>
+                @empty
+                    <p>No bla bla bla</p>
+                @endforelse
 
+        </div>
+        @endisset
+
+
+        @isset($clearanceRequest->other_phases)
         <div class="widget widget-table-one my-2">
             <div class="widget-heading">
                 <h5 class="">Other phases</h5>
             </div>
 
             {{--                TODO: add icons--}}
-            @isset($clearanceRequest->other_phases)
                 @foreach($clearanceRequest->other_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
@@ -102,7 +106,8 @@
                     </div>
             </div>
                 @endforeach
-            @endisset
+
         </div>
+        @endisset
     </div>
 @endsection
