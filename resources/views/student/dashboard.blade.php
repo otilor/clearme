@@ -47,7 +47,7 @@
         @isset($clearanceRequest->passed_phases)
         <div class="widget widget-table-one my-2">
             <div class="widget-heading">
-                <h5 class="">Passed phase</h5>
+                <h5 class="">Passed phases</h5>
             </div>
 
             {{--                TODO: add icons--}}
