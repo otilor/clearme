@@ -20,4 +20,9 @@ class ClearanceRequest extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getCurrentPhaseAttribute($value)
+    {
+        return Section::find($value);
+    }
 }

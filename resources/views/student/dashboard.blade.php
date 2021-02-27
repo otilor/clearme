@@ -21,10 +21,9 @@
 
         <div class="widget widget-table-one">
             <div class="widget-heading">
-                <h5 class="">Timeline of clearance process</h5>
+                <h5 class="">Current phase</h5>
             </div>
 
-                Current_phase
                     <div class="widget-content">
                         <div class="transactions-list">
                             <div class="t-item">
@@ -35,7 +34,7 @@
                                         </div>
                                     </div>
                                     <div class="t-name">
-                                        <h4>{{ $clearanceRequest->current_phase }}</h4>
+                                        <h4>{{ $clearanceRequest->current_phase->name }}</h4>
                                         {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                     </div>
 
