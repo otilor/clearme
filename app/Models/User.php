@@ -53,6 +53,6 @@ class User extends Authenticatable
 
     public function clearanceRequest(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
-        return $this->hasOne(ClearanceRequest::class);
+        return $this->hasOne(ClearanceRequest::class, 'student_id');
     }
 }
