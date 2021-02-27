@@ -11,7 +11,7 @@ class StudentController extends Controller
 {
     public function dashboard()
     {
-        $clearanceRequest = ClearanceRequest::find(auth()->id());
+        $clearanceRequest = ClearanceRequest::where('student_id', auth()->id())->first();
         return view('student.dashboard', compact('clearanceRequest'));
     }
 }
