@@ -16,6 +16,11 @@ class ClearanceRequest extends Model
         'student_id'
     ];
 
+    protected $casts = [
+        'passed_phases' => 'array',
+        'current_phases' => 'array',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

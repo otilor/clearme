@@ -47,7 +47,7 @@
 
         <div class="widget widget-table-one my-2">
             <div class="widget-heading">
-                <h5 class="">Current phase</h5>
+                <h5 class="">Passed phase</h5>
             </div>
 
             {{--                TODO: add icons--}}
