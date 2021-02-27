@@ -11,12 +11,23 @@ class ClearanceRequest extends Model
 
     protected $fillable = [
         'is_cleared',
-        'current_section',
-        'user_id'
+        'current_phase',
+        'passed_phases',
+        'student_id'
+    ];
+
+    protected $casts = [
+        'passed_phases' => 'array',
+        'other_phases' => 'array',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getCurrentPhaseAttribute($value)
+    {
+        return Section::find($value);
     }
 }

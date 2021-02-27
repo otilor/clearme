@@ -27,13 +27,28 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware(['auth']);
 
-Route::get('auto-login', function () {
-    abort_unless(app()->environment('local'), 403);
+Route::group(['prefix' => 'auto-login'], function () {
+    abort_unless(app()->environment(['local', 'testing']), 403);
+    Route::get('/', function () {
 
-    \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
 
-    return redirect()->to('/');
-})->name('dev-login');
+        return redirect()->to('/');
+    })->name('dev-login');
+
+    Route::get('student', function () {
+        \auth()->login(User::where('email', 'student@clearme.test')->first()->assignRole(['student']));
+
+        return redirect()->to('/student/dashboard');
+    })->name('student-dev-login');
+
+    Route::get('sectional-admin', function () {
+        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+
+        return redirect()->to(\route('sectional_admin.dashboard'));
+    })->name('sectional-admin-dev-login');
+});
+
 
 /** @var Router $router */
 
@@ -67,6 +82,12 @@ $router->group(['middleware' => 'auth'], function () use ($router){
         if (Auth::user()->hasRole('sectional_admin')) {
             return redirect(\route('sectional_admin.dashboard'));
         }
+
+        if (Auth::user()->hasRole('student')) {
+            return redirect(\route('student.dashboard'));
+        }
+
+        abort(403);
     });
 });
 

@@ -32,7 +32,8 @@
                                 <td class="text-primary">{{ $students[$i]->name }}</td>
                                 <td>{{ $students[$i]->email }}</td>
                                 <td class="">
-                                    @if($students[$i]->clearanceRequest->is_cleared)
+                                    @isset($students[$i]->clearanceRequest->current_phase)
+                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
                                     <button class="btn btn-dark btn-rounded">
                                         Approved
                                     </button>
@@ -41,10 +42,13 @@
                                             Pending
                                         </span>
                                     @endif
+                                    @endisset
                                 </td>
                                 <td>
-                                    @if($students[$i]->clearanceRequest->is_cleared)
-                                        <a href="#" class="badge outline-badge-danger">
+                                    @isset($students[$i]->clearanceRequest->current_phase)
+
+                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
+                                    <a href="#" class="badge outline-badge-danger">
                                             Cancel
                                         </a>
                                     @else
@@ -54,6 +58,7 @@
                                             <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
                                     @endif
+                                    @endisset
                                 </td>
                             </tr>
                         @endfor
