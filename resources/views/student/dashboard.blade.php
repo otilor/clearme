@@ -42,10 +42,16 @@
                             </div>
                         </div>
                     </div>
+        </div>
+
+
+        <div class="widget widget-table-one my-2">
+            <div class="widget-heading">
+                <h5 class="">Current phase</h5>
+            </div>
 
             {{--                TODO: add icons--}}
             @isset($clearanceRequest->passed_phases)
-                Passed phases
                 @foreach($clearanceRequest->passed_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
@@ -62,9 +68,6 @@
                                 </div>
 
                             </div>
-                            <div class="t-rate rate-dec">
-                                    <span class="badge outline-badge-success"> Cleared </span>
-                            </div>
                         </div>
                     </div>
             </div>
@@ -79,7 +82,6 @@
             </div>
 
             {{--                TODO: add icons--}}
-                Passed phases
                 @foreach($clearanceRequest->other_phases as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
