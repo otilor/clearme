@@ -31,9 +31,10 @@ class StudentFactory extends Factory
             'faculty_id' => Faculty::factory(),
         ];
     }
+
     public function configure()
     {
-        return $this->afterMaking(function (User $user) {
+        return $this->afterMaking(static function (User $user) {
             $user->assignRole('student');
             $this->afterCreating(static function ($user) {
                 $user->assignRole('student');
