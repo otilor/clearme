@@ -75,7 +75,22 @@ class RegisterController extends Controller
 
         $user->assignRole('student');
 
-        ClearanceRequest::newQuery()->create(['student_id' => $user->id]);
+
+        $payload = ['status' =>
+            [
+                'bursary' => ClearanceRequest::PENDING,
+                'admin' => ClearanceRequest::PENDING,
+                'student_affairs' => ClearanceRequest::PENDING,
+                'laboratories' => ClearanceRequest::PENDING,
+                'halls_of_residence' => ClearanceRequest::PENDING,
+                'head_of_department' => ClearanceRequest::PENDING,
+                'ict' => ClearanceRequest::PENDING,
+                'security' => ClearanceRequest::PENDING,
+                'medicals' => ClearanceRequest::PENDING,
+                'sports' => ClearanceRequest::PENDING,
+            ]
+        ];
+        ClearanceRequest::newQuery()->create(['student_id' => $user->id, 'payload' => $payload]);
 
         return $user;
     }
