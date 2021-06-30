@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ClearanceRequest;
 use App\Models\Profile;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -73,6 +74,8 @@ class RegisterController extends Controller
 
 
         $user->assignRole('student');
+
+        ClearanceRequest::newQuery()->create(['student_id' => $user->id]);
 
         return $user;
     }
