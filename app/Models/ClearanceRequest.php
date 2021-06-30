@@ -17,6 +17,7 @@ class ClearanceRequest extends Model
     ];
 
     protected $casts = [
+        'payload' => 'array',
         'passed_phases' => 'array',
         'other_phases' => 'array',
     ];
