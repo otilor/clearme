@@ -28,7 +28,10 @@ Route::get('/', function () {
 })->middleware(['auth']);
 
 Route::group(['prefix' => 'auto-login'], function () {
-    abort_unless(app()->environment(['local', 'testing']), 403);
+//    abort_unless(app()->environment(['local', 'testing']), 403);
+    if (! app()->environment(['local', 'testing'])){
+        abort(403);
+    }
     Route::get('/', function () {
 
         \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
