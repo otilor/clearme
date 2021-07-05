@@ -27,6 +27,10 @@ Route::get('/', function () {
     return redirect('/dashboard');
 })->middleware(['auth']);
 
+Route::get('profile', function () {
+    return \auth()->user();
+})->middleware('auth');
+
 Route::group(['prefix' => 'auto-login'], function () {
 //    abort_unless(app()->environment(['local', 'testing']), 403);
     if (! app()->environment(['local', 'testing'])){
