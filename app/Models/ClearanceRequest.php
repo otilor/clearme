@@ -40,7 +40,8 @@ class ClearanceRequest extends Model
         'is_cleared',
         'current_phase',
         'passed_phases',
-        'student_id'
+        'student_id',
+        'payload'
     ];
 
     protected $casts = [
