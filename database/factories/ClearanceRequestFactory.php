@@ -25,7 +25,6 @@ class ClearanceRequestFactory extends Factory
     {
         return [
             'student_id' => User::factory()->create(),
-            'current_phase' => 3,
              'payload' => [
                  'status' =>
                 [
@@ -41,8 +40,6 @@ class ClearanceRequestFactory extends Factory
                     'sports' => ClearanceRequest::PENDING,
                 ]
             ],
-            'passed_phases' => json_encode([1, 2]),
-            'other_phases' => json_encode([4, 5, 6, 7, 8])
         ];
     }
 }
