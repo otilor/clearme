@@ -15,7 +15,7 @@
             <div class="widget-content">
                 <div class="table-responsive">
                     <table class="table mb-4">
-                        <caption>List of all students who need clearance</caption>
+                        <caption>*List of all students who need clearance</caption>
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
