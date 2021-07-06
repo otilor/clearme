@@ -26,46 +26,41 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i = 0; $i<$students->count(); $i++)
+
                             <tr>
-                                <td class="text-center">{{ $i+1 }}</td>
-                                <td class="text-primary">{{ $students[$i]->name }}</td>
-                                <td>{{ $students[$i]->email }}</td>
+                                <td class="text-center">1</td>
+                                <td class="text-primary">Gabriel Akinyosoye</td>
+                                <td>gabrielfemi799@gmail.com</td>
                                 <td class="">
-                                    @isset($students[$i]->clearanceRequest->current_phase)
-                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
+
                                     <button class="btn btn-dark btn-rounded">
                                         Approved
                                     </button>
-                                    @else
+
                                         <span class=" shadow-none badge outline-badge-dark">
                                             Pending
                                         </span>
-                                    @endif
-                                    @endisset
                                 </td>
                                 <td>
-                                    @isset($students[$i]->clearanceRequest->current_phase)
 
-                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
+
                                     <a href="#" class="badge outline-badge-danger">
                                             Cancel
                                         </a>
-                                    @else
-                                        <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
-                                            <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+
+                                        <form action="/clearance/approve/1" method="post">
+                                            <input type="hidden" name="student_id" value="2">
                                             @csrf
                                             <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
-                                    @endif
-                                    @endisset
+
                                 </td>
                             </tr>
-                        @endfor
 
-                        @empty($students)
-                            <p>No student here!</p>
-                        @endempty
+
+{{--                        @empty($students)--}}
+{{--                            <p>No student here!</p>--}}
+{{--                        @endempty--}}
                         </tbody>
                     </table>
                 </div>

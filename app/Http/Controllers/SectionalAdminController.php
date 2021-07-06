@@ -14,7 +14,7 @@ class SectionalAdminController extends Controller
     public function dashboard()
     {
         $clearanceRequests = ClearanceRequest::all();
-        dd($clearanceRequests);
-        return view('sectional_admin.dashboard', compact('students'));
+//        dd($clearanceRequests);
+        return view('sectional_admin.dashboard');
     }
 }
