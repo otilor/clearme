@@ -39,6 +39,7 @@
                                 <td>{{ $clearanceRequest->student->email }}</td>
                                 <td class="">
 
+
                                     <button class="btn btn-dark btn-rounded">
                                         Approved
                                     </button>
