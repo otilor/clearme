@@ -26,9 +26,15 @@
                         </tr>
                         </thead>
                         <tbody>
-
+                        @php
+                        $counter=0
+                            @endphp
+                        @foreach($clearanceRequests as $clearanceRequest)
+                            @php
+                            $counter++
+                            @endphp
                             <tr>
-                                <td class="text-center">1</td>
+                                <td class="text-center">{{ $counter }}</td>
                                 <td class="text-primary">Gabriel Akinyosoye</td>
                                 <td>gabrielfemi799@gmail.com</td>
                                 <td class="">
@@ -56,6 +62,8 @@
 
                                 </td>
                             </tr>
+
+                        @endforeach
 
 
 {{--                        @empty($students)--}}
