@@ -35,8 +35,8 @@
                             @endphp
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
-                                <td class="text-primary">Gabriel Akinyosoye</td>
-                                <td>gabrielfemi799@gmail.com</td>
+                                <td class="text-primary">{{$clearanceRequest->student->name}}</td>
+                                <td>{{ $clearanceRequest->student->email }}</td>
                                 <td class="">
 
                                     <button class="btn btn-dark btn-rounded">
