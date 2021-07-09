@@ -71,7 +71,7 @@
                                     @endif
 
                                         @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::DECLINED)
-                                            <form action="/clearance/approve/1" method="post">
+                                            <form action="/clearance/approve" method="post">
                                                 <input type="hidden" name="student_id" value="2">
                                                 @csrf
                                                 <button class="btn btn-success" type="submit">Approve</button>
