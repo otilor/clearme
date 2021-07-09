@@ -27,6 +27,10 @@ class Section extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+    ];
+
     public function admin_invite()
     {
         return $this->hasOne(AdminInvite::class);
