@@ -30,6 +30,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|ClearanceRequest whereStudentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ClearanceRequest whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\User $student
  */
 class ClearanceRequest extends Model
 {
@@ -38,16 +39,13 @@ class ClearanceRequest extends Model
     const PENDING = 0;
     const APPROVED = 1;
     const DECLINED = 2;
-    protected $fillable = [
-        'is_cleared',
-        'current_phase',
-        'passed_phases',
-        'student_id',
+
+    protected $guarded = [
         'payload'
     ];
 
     protected $casts = [
-        'payload' => 'array',
+        'payload' => 'json',
         'passed_phases' => 'array',
         'other_phases' => 'array',
     ];
