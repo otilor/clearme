@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([RoleAndPermissionSeeder::class, AdminSeeder::class, SectionSeeder::class, StudentSeeder::class, ClearanceRequestSeeder::class]);
+        \DB::transaction(function () {
+            $this->call([RoleAndPermissionSeeder::class, AdminSeeder::class, SectionSeeder::class, StudentSeeder::class, ClearanceRequestSeeder::class]);
+        });
     }
 }
