@@ -28,7 +28,7 @@ class Section extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
+        'staff_id',
     ];
 
     public function admin_invite()
