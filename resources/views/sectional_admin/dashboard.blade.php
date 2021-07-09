@@ -40,13 +40,26 @@
                                 <td class="">
 
 
-                                    <button class="btn btn-dark btn-rounded">
-                                        Approved
-                                    </button>
+                                    @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
+                                        <button class="btn btn-dark btn-rounded">
+                                            Approved
+                                        </button>
+                                    @endif
 
-                                        <span class=" shadow-none badge outline-badge-dark">
-                                            Pending
-                                        </span>
+
+                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::PENDING)
+                                            <span class=" shadow-none badge outline-badge-dark">
+                                                Pending
+                                            </span>
+                                        @endif
+
+                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::DECLINED)
+                                            <span class=" shadow-none badge outline-badge-danger">
+                                                Declined
+                                            </span>
+                                        @endif
+
+
                                 </td>
                                 <td>
 

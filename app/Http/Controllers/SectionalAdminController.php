@@ -17,7 +17,6 @@ class SectionalAdminController extends Controller
 
         $clearanceRequest = $clearanceRequests->first();
 
-        dd($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug]);
         return view('sectional_admin.dashboard', compact('clearanceRequests'));
     }
 }
