@@ -26,7 +26,7 @@ class SectionSeeder extends Seeder
         ];
         if (! Section::where('name', Arr::random($sections))->first()) {
             foreach ($sections as $section) {
-                Section::create(['name' => $section]);
+                Section::create(['name' => $section, 'slug' => \Str::slug($section)]);
             }
         }
 

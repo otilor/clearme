@@ -15,7 +15,7 @@
             <div class="widget-content">
                 <div class="table-responsive">
                     <table class="table mb-4">
-                        <caption>List of all students who need clearance</caption>
+                        <caption>*List of all students who need clearance</caption>
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
@@ -26,46 +26,50 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @for($i = 0; $i<$students->count(); $i++)
+                        @php
+                        $counter=0
+                            @endphp
+                        @foreach($clearanceRequests as $clearanceRequest)
+                            @php
+                            $counter++
+                            @endphp
                             <tr>
-                                <td class="text-center">{{ $i+1 }}</td>
-                                <td class="text-primary">{{ $students[$i]->name }}</td>
-                                <td>{{ $students[$i]->email }}</td>
+                                <td class="text-center">{{ $counter }}</td>
+                                <td class="text-primary">{{$clearanceRequest->student->name}}</td>
+                                <td>{{ $clearanceRequest->student->email }}</td>
                                 <td class="">
-                                    @isset($students[$i]->clearanceRequest->current_phase)
-                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
+
+
                                     <button class="btn btn-dark btn-rounded">
                                         Approved
                                     </button>
-                                    @else
+
                                         <span class=" shadow-none badge outline-badge-dark">
                                             Pending
                                         </span>
-                                    @endif
-                                    @endisset
                                 </td>
                                 <td>
-                                    @isset($students[$i]->clearanceRequest->current_phase)
 
-                                    @if(is_null($students[$i]->clearanceRequest->current_phase))
+
                                     <a href="#" class="badge outline-badge-danger">
                                             Cancel
                                         </a>
-                                    @else
-                                        <form action="/clearance/approve/{{$students[$i]->id}}" method="post">
-                                            <input type="hidden" name="student_id" value="{{ $students[$i]->id }}">
+
+                                        <form action="/clearance/approve/1" method="post">
+                                            <input type="hidden" name="student_id" value="2">
                                             @csrf
                                             <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
-                                    @endif
-                                    @endisset
+
                                 </td>
                             </tr>
-                        @endfor
 
-                        @empty($students)
-                            <p>No student here!</p>
-                        @endempty
+                        @endforeach
+
+
+{{--                        @empty($students)--}}
+{{--                            <p>No student here!</p>--}}
+{{--                        @endempty--}}
                         </tbody>
                     </table>
                 </div>

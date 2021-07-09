@@ -50,9 +50,9 @@ class ClearanceRequest extends Model
         'other_phases' => 'array',
     ];
 
-    public function user()
+    public function student()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'student_id');
     }
 
     public function getCurrentPhaseAttribute($value)
