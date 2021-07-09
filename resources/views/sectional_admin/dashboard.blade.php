@@ -40,20 +40,20 @@
                                 <td class="">
 
 
-                                    @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
+                                    @if($slug = $clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
                                         <button class="btn btn-dark btn-rounded">
                                             Approved
                                         </button>
                                     @endif
 
 
-                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::PENDING)
+                                        @if($slug === \App\Models\ClearanceRequest::PENDING)
                                             <span class=" shadow-none badge outline-badge-dark">
                                                 Pending
                                             </span>
                                         @endif
 
-                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::DECLINED)
+                                        @if($slug === \App\Models\ClearanceRequest::DECLINED)
                                             <span class=" shadow-none badge outline-badge-danger">
                                                 Declined
                                             </span>
@@ -64,13 +64,13 @@
                                 <td>
 
 
-                                    @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
+                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
                                         <a href="#" class="badge outline-badge-danger">
                                                 Reject
                                         </a>
                                     @endif
 
-                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::DECLINED)
+                                        @if($slug === \App\Models\ClearanceRequest::DECLINED)
                                             <form action="/clearance/approve" method="post">
                                                 <input type="hidden" name="student_id" value="2">
                                                 @csrf

@@ -11,6 +11,7 @@ class ClearanceRequestController extends Controller
     {
         $clearanceRequest = ClearanceRequest::where('user_id', $request->student_id)
             ->first();
+        dd($clearanceRequest);
 
         $clearanceRequest->update(['is_cleared' => true]);
 
