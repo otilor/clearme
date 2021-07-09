@@ -128,4 +128,10 @@ class User extends Authenticatable
             });
         });
     }
+
+    public function mySection()
+    {
+        // for only sectional admins
+        return $this->hasOne(Section::class);
+    }
 }
