@@ -65,7 +65,7 @@
 
 
                                     <a href="#" class="badge outline-badge-danger">
-                                            Cancel
+                                            Reject
                                         </a>
 
                                         <form action="/clearance/approve/1" method="post">
