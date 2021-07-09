@@ -15,10 +15,7 @@ class SectionalAdminController extends Controller
     {
         $clearanceRequests = ClearanceRequest::all();
 
-        $clearanceRequests->each(function ($clearanceRequest) {
-           return $clearanceRequest->user;
-        });
-
+        $clearanceRequest = $clearanceRequests->first();
 //        dd($clearanceRequests);
         return view('sectional_admin.dashboard', compact('clearanceRequests'));
     }
