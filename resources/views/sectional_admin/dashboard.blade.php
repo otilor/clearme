@@ -31,7 +31,8 @@
                             @endphp
                         @foreach($clearanceRequests as $clearanceRequest)
                             @php
-                            $counter++
+                            $counter++;
+                            $slug = $clearanceRequest['payload']['status'][auth()->user()?->mySection->slug]
                             @endphp
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
@@ -40,18 +41,17 @@
                                 <td class="">
 
 
-                                    @if($slug = $clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
+                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
                                         <button class="btn btn-dark btn-rounded">
                                             Approved
                                         </button>
                                     @endif
 
-
-                                        @if($slug === \App\Models\ClearanceRequest::PENDING)
-                                            <span class=" shadow-none badge outline-badge-dark">
-                                                Pending
-                                            </span>
-                                        @endif
+                                    @if($slug === \App\Models\ClearanceRequest::PENDING)
+                                        <span class=" shadow-none badge outline-badge-dark">
+                                            Pending
+                                        </span>
+                                    @endif
 
                                         @if($slug === \App\Models\ClearanceRequest::DECLINED)
                                             <span class=" shadow-none badge outline-badge-danger">
@@ -70,13 +70,13 @@
                                         </a>
                                     @endif
 
-                                        @if($slug === \App\Models\ClearanceRequest::DECLINED)
-                                            <form action="/clearance/approve" method="post">
-                                                <input type="hidden" name="student_id" value="2">
-                                                @csrf
-                                                <button class="btn btn-success" type="submit">Approve</button>
-                                            </form>
-                                        @endif
+                                    @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
+                                        <form action="/clearance/approve" method="post">
+                                            <input type="hidden" name="student_id" value="2">
+                                            @csrf
+                                            <button class="btn btn-success" type="submit">Approve</button>
+                                        </form>
+                                    @endif
 
                                 </td>
                             </tr>
