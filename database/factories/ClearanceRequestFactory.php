@@ -30,10 +30,10 @@ class ClearanceRequestFactory extends Factory
                 [
                     'bursary' => ClearanceRequest::PENDING,
                     'admin' => ClearanceRequest::PENDING,
-                    'student_affairs' => ClearanceRequest::PENDING,
+                    'student-affairs' => ClearanceRequest::PENDING,
                     'laboratories' => ClearanceRequest::PENDING,
-                    'halls_of_residence' => ClearanceRequest::PENDING,
-                    'head_of_department' => ClearanceRequest::PENDING,
+                    'halls-of-residence' => ClearanceRequest::PENDING,
+                    'head-of-department' => ClearanceRequest::PENDING,
                     'ict' => ClearanceRequest::PENDING,
                     'security' => ClearanceRequest::PENDING,
                     'medicals' => ClearanceRequest::PENDING,

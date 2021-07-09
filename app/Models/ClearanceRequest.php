@@ -36,6 +36,8 @@ class ClearanceRequest extends Model
     use HasFactory;
 
     const PENDING = 0;
+    const APPROVED = 1;
+    const DECLINED = 2;
     protected $fillable = [
         'is_cleared',
         'current_phase',
