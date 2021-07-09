@@ -16,7 +16,7 @@ class SectionalAdminController extends Controller
         $clearanceRequests = ClearanceRequest::all();
 
 
-        $currentUserSection = auth()->user()->section;
+        $currentUserSection = auth()->user()->mySection;
         dd($currentUserSection);
         $clearanceRequests->each(function ($clearanceRequest) {
            return $clearanceRequest->user;
