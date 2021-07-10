@@ -40,10 +40,9 @@ class ClearanceRequest extends Model
     const APPROVED = 1;
     const DECLINED = 2;
 
-    protected $guarded = [
-        'payload'
-    ];
 
+//    protected static $unguarded = true;
+    protected $guarded = [];
     protected $casts = [
         'payload' => 'json',
         'passed_phases' => 'array',

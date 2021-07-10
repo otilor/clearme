@@ -16,7 +16,7 @@ class ClearanceRequestController extends Controller
 
         $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)
             ->first()
-            ->forceFill(["payload->status->{$currentSection}" =>ClearanceRequest::APPROVED ])->save();
+            ->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::APPROVED ])->save();
 
 //        dd($clearanceRequest);
 //        dd($clearanceRequest->payload['status'][$currentSection]);
