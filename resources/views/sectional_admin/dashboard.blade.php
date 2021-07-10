@@ -42,7 +42,7 @@
 
 
                                     @if($slug === \App\Models\ClearanceRequest::APPROVED)
-                                        <button class="btn btn-dark btn-rounded">
+                                        <button class="badge badge-success event-badge">
                                             Approved
                                         </button>
                                     @endif
@@ -62,13 +62,6 @@
 
                                 </td>
                                 <td>
-
-
-                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
-                                        <a href="#" class="badge outline-badge-danger">
-                                                Reject
-                                        </a>
-                                    @endif
 
                                     @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
                                         <form action="/clearance/approve" method="post">
