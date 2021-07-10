@@ -13,11 +13,13 @@ class ClearanceRequestController extends Controller
     {
 
         $currentSection = auth()->user()->mySection->slug;
+        $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)->first();
+        $clonedClearanceRequest = clone $clearanceRequest;
 
-        $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)->first()
-            ->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::APPROVED ])->save();
 
-//        notify()->success("Student {$clearanceRequest->user?->name} has been cleared");
+        $clearanceRequest->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::APPROVED ])->save();
+
+        notify()->success("{$clonedClearanceRequest->student->name} has been cleared");
         return back();
     }
 
