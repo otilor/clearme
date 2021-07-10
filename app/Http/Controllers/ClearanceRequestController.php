@@ -31,7 +31,6 @@ class ClearanceRequestController extends Controller
         $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)->first();
         $clonedClearanceRequest = clone $clearanceRequest;
 
-
         $clearanceRequest->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::DECLINED ])->save();
 
         notify()->success("{$clonedClearanceRequest->student->name} has been declined clearance");
