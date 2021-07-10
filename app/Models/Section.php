@@ -22,6 +22,10 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Section whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Section whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $slug
+ * @property int|null $user_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Section whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Section whereUserId($value)
  */
 class Section extends Model
 {

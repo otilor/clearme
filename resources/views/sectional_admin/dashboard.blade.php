@@ -31,7 +31,8 @@
                             @endphp
                         @foreach($clearanceRequests as $clearanceRequest)
                             @php
-                            $counter++
+                            $counter++;
+                            $slug = $clearanceRequest['payload']['status'][auth()->user()?->mySection->slug]
                             @endphp
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
@@ -40,20 +41,19 @@
                                 <td class="">
 
 
-                                    @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::APPROVED)
+                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
                                         <button class="btn btn-dark btn-rounded">
                                             Approved
                                         </button>
                                     @endif
 
+                                    @if($slug === \App\Models\ClearanceRequest::PENDING)
+                                        <span class=" shadow-none badge outline-badge-dark">
+                                            Pending
+                                        </span>
+                                    @endif
 
-                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::PENDING)
-                                            <span class=" shadow-none badge outline-badge-dark">
-                                                Pending
-                                            </span>
-                                        @endif
-
-                                        @if($clearanceRequest['payload']['status'][auth()->user()?->mySection->slug] === \App\Models\ClearanceRequest::DECLINED)
+                                        @if($slug === \App\Models\ClearanceRequest::DECLINED)
                                             <span class=" shadow-none badge outline-badge-danger">
                                                 Declined
                                             </span>
@@ -64,15 +64,19 @@
                                 <td>
 
 
-                                    <a href="#" class="badge outline-badge-danger">
-                                            Cancel
+                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
+                                        <a href="#" class="badge outline-badge-danger">
+                                                Reject
                                         </a>
+                                    @endif
 
-                                        <form action="/clearance/approve/1" method="post">
-                                            <input type="hidden" name="student_id" value="2">
+                                    @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
+                                        <form action="/clearance/approve" method="post">
+                                            <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
                                             @csrf
                                             <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
+                                    @endif
 
                                 </td>
                             </tr>

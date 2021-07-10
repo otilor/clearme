@@ -34,7 +34,7 @@ class ClearanceRequestFactory extends Factory
                     'laboratories' => ClearanceRequest::PENDING,
                     'halls-of-residence' => ClearanceRequest::PENDING,
                     'head-of-department' => ClearanceRequest::PENDING,
-                    'ict' => ClearanceRequest::PENDING,
+                    'ict-unit' => ClearanceRequest::PENDING,
                     'security' => ClearanceRequest::PENDING,
                     'medicals' => ClearanceRequest::PENDING,
                     'sports' => ClearanceRequest::PENDING,
