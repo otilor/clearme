@@ -13,6 +13,7 @@ class ClearanceRequestController extends Controller
     {
 
         $currentSection = auth()->user()->mySection->slug;
+
         $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)->first();
         $clonedClearanceRequest = clone $clearanceRequest;
 
