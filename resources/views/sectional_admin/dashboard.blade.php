@@ -72,7 +72,7 @@
 
                                     @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
                                         <form action="/clearance/approve" method="post">
-                                            <input type="hidden" name="student_id" value="2">
+                                            <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
                                             @csrf
                                             <button class="btn btn-success" type="submit">Approve</button>
                                         </form>
