@@ -78,6 +78,13 @@
                                         </form>
                                     @endif
 
+                                        @if($slug === \App\Models\ClearanceRequest::APPROVED)
+                                            <form action="/clearance/reject" method="post">
+                                                <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
+                                                @csrf
+                                                <button class="btn btn-danger" type="submit">Reject</button>
+                                            </form>
+                                        @endif
                                 </td>
                             </tr>
 
