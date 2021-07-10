@@ -26,12 +26,15 @@ class ClearanceRequestController extends Controller
 
     public function reject(Request $request)
     {
-        $clearanceRequest = ClearanceRequest::where('user_id', $request->student_id)
-            ->first();
+        $currentSection = auth()->user()->mySection->slug;
 
-        $clearanceRequest->update(['is_cleared' => false]);
+        $clearanceRequest = $this->clearanceRequest->where('student_id', $request->student_id)->first();
+        $clonedClearanceRequest = clone $clearanceRequest;
 
-        notify()->error("Student has been rejected");
+
+        $clearanceRequest->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::DECLINED ])->save();
+
+        notify()->success("{$clonedClearanceRequest->student->name} has been declined clearance");
         return back();
     }
 }
