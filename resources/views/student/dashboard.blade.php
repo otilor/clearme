@@ -45,8 +45,6 @@
             </div>
 
             {{--                TODO: add icons--}}
-            @isset($clearanceRequest->payload->status)
-                @foreach($clearanceRequest->payload->status as $phase)
             <div class="widget-content">
                     <div class="transactions-list">
                         <div class="t-item">
@@ -57,7 +55,9 @@
                                     </div>
                                 </div>
                                 <div class="t-name">
-                                    <h4>{{ $phase }}</h4>
+                                    @foreach($clearanceRequest->payload['status'] as $key => $value)
+                                        <h4>{{ \Illuminate\Support\Str::title($key)  }}</h4>
+                                    @endforeach
                                     {{--                                    <p class="meta-date">4 Aug 1:00PM</p>--}}
                                 </div>
 
@@ -65,8 +65,6 @@
                         </div>
                     </div>
             </div>
-                @endforeach
-            @endisset
         </div>
     </div>
 @endsection
