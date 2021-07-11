@@ -43,7 +43,9 @@
 <!--  BEGIN NAVBAR  -->
 <div class="header-container fixed-top">
     <header class="header navbar navbar-expand-sm">
-        <x:notify-messages />
+        <div id="notify-message">
+            <x-notify-messages />
+        </div>
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
                 <a href="/">
@@ -177,5 +179,12 @@
 @notifyJs
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#notify-message').fadeOut()
+        }, 3000)
+    })
+</script>
 </body>
 </html>
