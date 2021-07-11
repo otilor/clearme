@@ -13,7 +13,7 @@ class StudentController extends Controller
     {
         $clearanceRequest = ClearanceRequest::where('student_id', auth()->id())
             ->first();
-     // since there are multiple clearance requests, ,
+
         return view('student.dashboard', compact('clearanceRequest'));
     }
 }
