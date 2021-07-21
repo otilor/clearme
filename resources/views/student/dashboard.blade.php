@@ -9,7 +9,7 @@
         <div class="widget widget-table-one">
             <div class="widget-heading">
                 <h5 class="">Clearance report</h5>
-                <span class="ml-4 btn btn-sm btn-primary">Print</span>
+                <span class="ml-4 btn btn-sm btn-primary">Print clearance report</span>
             </div>
 
             {{--                TODO: add icons--}}
