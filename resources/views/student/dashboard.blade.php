@@ -34,7 +34,7 @@
                             @endphp
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
-                                <td class="text-primary">{{ \Illuminate\Support\Str::title($key) }}</td>
+                                <td class="text-primary">{{ \Illuminate\Support\Str::title(str_replace('-', ' ', $key)) }}</td>
                                 <td>
                                     <button class="badge badge-success event-badge">
                                         Approved
