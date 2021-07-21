@@ -21,7 +21,6 @@
                             <th class="text-center">#</th>
                             <th>Name</th>
                             <th class="">Status</th>
-                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,6 +34,11 @@
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
                                 <td class="text-primary">{{ \Illuminate\Support\Str::title($key) }}</td>
+                                <td>
+                                    <button class="badge badge-success event-badge">
+                                        Approved
+                                    </button>
+                                </td>
 {{--                                <td class="">--}}
 
 {{--                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)--}}
