@@ -15,7 +15,7 @@ class PrintPDF
     public static function print($data)
     {
         view()->share('data', $data);
-        $pdf = (new PDF)->loadView('pdf_view', $data);
+        $pdf = (new PDF)->loadView('prints.clearance-report', $data);
 
         return $pdf->download('clearance_certificate.pdf');
     }
