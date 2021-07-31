@@ -44,6 +44,7 @@
             margin: 20px;
         }
     </style>
+    <title>Clearance Report</title>
 </head>
 <body>
 <div class="container">
