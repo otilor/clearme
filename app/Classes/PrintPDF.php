@@ -12,6 +12,6 @@ class PrintPDF
         view()->share('data', $data);
         $pdf = PDF::loadView('prints.clearance-report', $data);
 
-        return $pdf->download('clearance_certificate.pdf');
+        return $pdf->stream();
     }
 }
