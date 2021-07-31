@@ -3,6 +3,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <style type='text/css'>
+        .page-break {
+            page-break-after: always;
+        }
         body, html {
             margin: 0;
             padding: 0;
