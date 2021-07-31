@@ -2,7 +2,7 @@
 
 
 namespace App\Classes;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 
 
 class PrintPDF
