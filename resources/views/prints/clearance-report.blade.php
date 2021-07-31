@@ -4,7 +4,7 @@
 
     @include('beautymail::templates.widgets.newfeatureStart')
 
-    <h4 class="secondary"><strong>Congratulations, man!</strong></h4>
+    <h4 class="secondary"><strong>Congratulations, {{ $data['name'] }}!</strong></h4>
     <p>You've completed the clearance process</p>
 
     @include('beautymail::templates.widgets.newfeatureEnd')
