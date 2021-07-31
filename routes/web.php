@@ -62,6 +62,7 @@ Route::get('sectional-admin', function () {
 $router->group(['middleware' => 'auth'], function () use ($router){
     $router->group(['prefix' => 'student', 'middleware' => ['auth', 'role:student']], function () use ($router) {
         $router->get('dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard');
+        $router->get('print-pdf', [StudentController::class, 'printPdf']);
     });
 
     $router->group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () use ($router) {

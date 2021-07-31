@@ -7,17 +7,11 @@ use Barryvdh\DomPDF\PDF;
 
 class PrintPDF
 {
-    public static function using($data)
-    {
-        return self::print($data);
-    }
-
-    public static function print($data)
+    public function print($data)
     {
         view()->share('data', $data);
-        $pdf = (new PDF)->loadView('prints.clearance-report', $data);
+        $pdf = PDF::loadView('prints.clearance-report', $data);
 
         return $pdf->download('clearance_certificate.pdf');
     }
-
 }
