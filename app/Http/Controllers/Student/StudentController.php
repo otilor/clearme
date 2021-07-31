@@ -23,7 +23,7 @@ class StudentController extends Controller
     {
         $data = collect(['name' => auth()->user()->name, 'email' => auth()->user()->email]);
         view()->share('data', $data);
-        $pdf = PDF::loadView('prints.clearance-report', $data);
+        $pdf = PDF::loadView('prints.clearance-report', $data)->setOptions(['defaultFont' => 'sans-serif']);
 
         return $pdf->stream();
     }
