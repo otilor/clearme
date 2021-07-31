@@ -1,11 +1,12 @@
-@extends('beautymail::templates.widgets')
+<!DOCTYPE html>
+<head>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>Clearance Report</title>
 
-@section('content')
+</head>
 
-    @include('beautymail::templates.widgets.newfeatureStart')
+<body>
+<!-- component -->
 
-    <h4 class="secondary"><strong>Congratulations, {{ $data['name'] }}!</strong></h4>
-    <p>You've completed the clearance process</p>
-
-    @include('beautymail::templates.widgets.newfeatureEnd')
-@stop
+</body>
+</html>
