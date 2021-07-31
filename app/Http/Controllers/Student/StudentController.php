@@ -20,6 +20,7 @@ class StudentController extends Controller
 
     public function printPdf()
     {
-        PrintPDF::using($details);
+        $data = collect(['name' => auth()->user()->name(), 'email' => auth()->user()->email]);
+        PrintPDF::using();
     }
 }
