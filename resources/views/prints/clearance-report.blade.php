@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Clearance Report</title>
-</head>
-<body>
-<div class="container">
-    <div class="logo">
-        An Organization
-    </div>
+@extends('beautymail::templates.widgets')
 
-    <div class="marquee">
-        Certificate of Completion
-    </div>
+@section('content')
 
-    <div class="assignment">
-        This certificate is presented to
-    </div>
+    @include('beautymail::templates.widgets.newfeatureStart')
 
-    <div class="person">
-        Joe Nathan
-    </div>
+    <h4 class="secondary"><strong>Congratulations, man!</strong></h4>
+    <p>You've completed the clearance process</p>
 
-    <div class="reason">
-        For deftly defying the laws of gravity<br/>
-        and flying high
-    </div>
-</div>
-</body>
-</html>
+    @include('beautymail::templates.widgets.newfeatureEnd')
+@stop
