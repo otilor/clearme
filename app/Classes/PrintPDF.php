@@ -2,7 +2,7 @@
 
 
 namespace App\Classes;
-use PDF;
+use Barryvdh\DomPDF\PDF;
 
 
 class PrintPDF
@@ -15,7 +15,7 @@ class PrintPDF
     public static function print($data)
     {
         view()->share('data', $data);
-        $pdf = PDF::loadView('pdf_view', $data);
+        $pdf = (new PDF)->loadView('pdf_view', $data);
 
         return $pdf->download('clearance_certificate.pdf');
     }
