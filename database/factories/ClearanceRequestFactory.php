@@ -28,16 +28,24 @@ class ClearanceRequestFactory extends Factory
              'payload' => [
                  'status' =>
                 [
-                    'bursary' => ClearanceRequest::PENDING,
-                    'admin' => ClearanceRequest::PENDING,
+                    'academic-affairs' => ClearanceRequest::PENDING,
+                    'university-library' => ClearanceRequest::PENDING,
+                    'bursary-department' => ClearanceRequest::PENDING,
+                    'faculty' => ClearanceRequest::PENDING,
                     'student-affairs' => ClearanceRequest::PENDING,
                     'laboratories' => ClearanceRequest::PENDING,
-                    'halls-of-residence' => ClearanceRequest::PENDING,
+                    'hall-of-residence' => ClearanceRequest::PENDING,
                     'head-of-department' => ClearanceRequest::PENDING,
                     'ict-unit' => ClearanceRequest::PENDING,
                     'security' => ClearanceRequest::PENDING,
-                    'medicals' => ClearanceRequest::PENDING,
                     'sports' => ClearanceRequest::PENDING,
+                    'biology-laboratory' => ClearanceRequest::PENDING,
+                    'microbiology-laboratory' => ClearanceRequest::PENDING,
+                    'chemistry-laboratory' => ClearanceRequest::PENDING,
+                    'biochemistry-laboratory' => ClearanceRequest::PENDING,
+                    'physics-laboratory' => ClearanceRequest::PENDING,
+                    'language-laboratory' => ClearanceRequest::PENDING,
+                    'mass-communication-studio' => ClearanceRequest::PENDING,
                 ]
             ],
         ];
