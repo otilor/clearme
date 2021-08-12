@@ -19,6 +19,7 @@ class ClearanceRequestController extends Controller
 
         $clearanceRequest->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::APPROVED ])->save();
 
+        dd($clearanceRequest);
         notify()->success("{$clonedClearanceRequest->student->name} has been cleared");
         return back();
     }

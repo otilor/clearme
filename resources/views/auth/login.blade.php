@@ -57,12 +57,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <div>Or continue with<br>
-                                    @env('local')
-                                        <a class="text-danger" href="{{ route('dev-login') }}">
-                                            Developer login
-                                        </a>
-                                    @endenv</div>
+
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
