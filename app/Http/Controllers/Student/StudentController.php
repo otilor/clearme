@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Student;
 
+use App\Classes\PrintPDF;
+use PDF;
 use App\Http\Controllers\Controller;
 use App\Models\ClearanceRequest;
 use App\Models\Section;
@@ -15,5 +17,14 @@ class StudentController extends Controller
             ->first();
 
         return view('student.dashboard', compact('clearanceRequest'));
+    }
+
+    public function printPdf()
+    {
+        $data = collect(['name' => auth()->user()->name, 'email' => auth()->user()->email]);
+        view()->share('data', $data);
+        $pdf = PDF::loadView('prints.clearance-report', $data)->setOptions(['defaultFont' => 'sans-serif']);
+
+        return $pdf->stream();
     }
 }
