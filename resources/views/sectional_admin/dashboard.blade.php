@@ -34,52 +34,52 @@
                             $counter++;
                             $slug = $clearanceRequest['payload']['status'][auth()->user()?->mySection->slug]
                             @endphp
-                            <tr>
-                                <td class="text-center">{{ $counter }}</td>
-                                <td class="text-primary">{{$clearanceRequest->student->name}}</td>
-                                <td>{{ $clearanceRequest->student->email }}</td>
-                                <td class="">
+                                <tr>
+                                    <td class="text-center">{{ $counter }}</td>
+                                    <td class="text-primary"><a href="/">{{$clearanceRequest->student->name}}</a></td>
+                                    <td>{{ $clearanceRequest->student->email }}</td>
+                                    <td class="">
 
 
-                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)
-                                        <button class="badge badge-success event-badge">
-                                            Approved
-                                        </button>
-                                    @endif
+                                        @if($slug === \App\Models\ClearanceRequest::APPROVED)
+                                            <button class="badge badge-success event-badge">
+                                                Approved
+                                            </button>
+                                        @endif
 
-                                    @if($slug === \App\Models\ClearanceRequest::PENDING)
-                                        <span class=" shadow-none badge outline-badge-dark">
-                                            Pending
-                                        </span>
-                                    @endif
-
-                                        @if($slug === \App\Models\ClearanceRequest::DECLINED)
-                                            <span class=" shadow-none badge outline-badge-danger">
-                                                Declined
+                                        @if($slug === \App\Models\ClearanceRequest::PENDING)
+                                            <span class=" shadow-none badge outline-badge-dark">
+                                                Pending
                                             </span>
                                         @endif
 
+                                            @if($slug === \App\Models\ClearanceRequest::DECLINED)
+                                                <span class=" shadow-none badge outline-badge-danger">
+                                                    Declined
+                                                </span>
+                                            @endif
 
-                                </td>
-                                <td>
 
-                                    @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
-                                        <form action="/clearance/approve" method="post">
-                                            <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
-                                            @csrf
-                                            <button class="btn btn-success" type="submit">Approve</button>
-                                        </form>
-                                    @endif
+                                    </td>
+                                    <td>
 
-                                        @if($slug === \App\Models\ClearanceRequest::APPROVED)
-                                            <form action="/clearance/reject" method="post">
+                                        @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)
+                                            <form action="/clearance/approve" method="post">
                                                 <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
                                                 @csrf
-                                                <button class="btn btn-danger" type="submit">Reject</button>
+                                                <button class="btn btn-success" type="submit">Approve</button>
                                             </form>
                                         @endif
-                                </td>
-                            </tr>
+
+                                            @if($slug === \App\Models\ClearanceRequest::APPROVED)
+                                                <form action="/clearance/reject" method="post">
+                                                    <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">
+                                                    @csrf
+                                                    <button class="btn btn-danger" type="submit">Reject</button>
+                                                </form>
+                                            @endif
+                                    </td>
+                                </tr>
 
                         @endforeach
 
