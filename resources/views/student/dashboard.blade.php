@@ -28,58 +28,32 @@
                         @php
                             $counter=0
                         @endphp
-                        @foreach($clearanceRequest->payload['status'] as $key => $value)
-                            @php
-                                $counter++;
-                            @endphp
+                        @foreach($clearanceRequest->payload['status'] as $sectionName => $sectionStatus)
                             <tr>
                                 <td class="text-center">{{ $counter }}</td>
-                                <td class="text-primary">{{ \Illuminate\Support\Str::title(str_replace('-', ' ', $key)) }}</td>
-                                <td>
-                                    <button class="badge badge-success event-badge">
-                                        Approved
-                                    </button>
+                                <td class="text-primary">{{ \Illuminate\Support\Str::title(str_replace('-', ' ', $sectionName)) }}</td>
+                                <td class="">
+
+                                    @if($sectionStatus === \App\Models\ClearanceRequest::APPROVED)
+                                        <button class="badge badge-success event-badge">
+                                            Approved
+                                        </button>
+                                    @endif
+
+                                    @if($sectionStatus === \App\Models\ClearanceRequest::PENDING)
+                                        <span class=" shadow-none badge outline-badge-dark">
+                                            Pending
+                                        </span>
+                                    @endif
+
+                                    @if($sectionStatus === \App\Models\ClearanceRequest::DECLINED)
+                                        <span class=" shadow-none badge outline-badge-danger">
+                                                Declined
+                                            </span>
+                                    @endif
+
+
                                 </td>
-{{--                                <td class="">--}}
-
-{{--                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)--}}
-{{--                                        <button class="badge badge-success event-badge">--}}
-{{--                                            Approved--}}
-{{--                                        </button>--}}
-{{--                                    @endif--}}
-
-{{--                                    @if($slug === \App\Models\ClearanceRequest::PENDING)--}}
-{{--                                        <span class=" shadow-none badge outline-badge-dark">--}}
-{{--                                            Pending--}}
-{{--                                        </span>--}}
-{{--                                    @endif--}}
-
-{{--                                    @if($slug === \App\Models\ClearanceRequest::DECLINED)--}}
-{{--                                        <span class=" shadow-none badge outline-badge-danger">--}}
-{{--                                                Declined--}}
-{{--                                            </span>--}}
-{{--                                    @endif--}}
-
-
-{{--                                </td>--}}
-{{--                                <td>--}}
-
-{{--                                    @if($slug === \App\Models\ClearanceRequest::DECLINED || $slug === \App\Models\ClearanceRequest::PENDING)--}}
-{{--                                        <form action="/clearance/approve" method="post">--}}
-{{--                                            <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">--}}
-{{--                                            @csrf--}}
-{{--                                            <button class="btn btn-success" type="submit">Approve</button>--}}
-{{--                                        </form>--}}
-{{--                                    @endif--}}
-
-{{--                                    @if($slug === \App\Models\ClearanceRequest::APPROVED)--}}
-{{--                                        <form action="/clearance/reject" method="post">--}}
-{{--                                            <input type="hidden" name="student_id" value="{{ $clearanceRequest->student_id }}">--}}
-{{--                                            @csrf--}}
-{{--                                            <button class="btn btn-danger" type="submit">Reject</button>--}}
-{{--                                        </form>--}}
-{{--                                    @endif--}}
-{{--                                </td>--}}
                             </tr>
 
                         @endforeach

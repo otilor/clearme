@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Student;
 
 use App\Classes\PrintPDF;
+use Illuminate\Support\Str;
 use PDF;
 use App\Http\Controllers\Controller;
 use App\Models\ClearanceRequest;
@@ -15,7 +16,9 @@ class StudentController extends Controller
     {
         $clearanceRequest = ClearanceRequest::where('student_id', auth()->id())
             ->first();
-
+//        foreach($clearanceRequest->payload['status'] as $section => $val) {
+//            dd(str_replace('-', ' ', Str::title($section)));
+//        }
         return view('student.dashboard', compact('clearanceRequest'));
     }
 
