@@ -31,30 +31,30 @@ Route::get('profile', function () {
     return \auth()->user();
 })->middleware('auth');
 
-Route::group(['prefix' => 'auto-login'], function () {
-//    abort_unless(app()->environment(['local', 'testing']), 403);
-    if (! app()->environment(['local', 'testing'])){
-        abort(403);
-    }
-    Route::get('/', function () {
-
-        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
-
-        return redirect()->to('/');
-    })->name('dev-login');
-
-    Route::get('student', function () {
-        \auth()->login(User::where('email', 'student@clearme.test')->first()->assignRole(['student']));
-
-        return redirect()->to('/student/dashboard');
-    })->name('student-dev-login');
-
-Route::get('sectional-admin', function () {
-        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
-
-        return redirect()->to(\route('sectional_admin.dashboard'));
-    })->name('sectional-admin-dev-login');
-});
+//Route::group(['prefix' => 'auto-login'], function () {
+////    abort_unless(app()->environment(['local', 'testing']), 403);
+//    if (! app()->environment(['local', 'testing'])){
+//        abort(403);
+//    }
+//    Route::get('/', function () {
+//
+//        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+//
+//        return redirect()->to('/');
+//    })->name('dev-login');
+//
+//    Route::get('student', function () {
+//        \auth()->login(User::where('email', 'student@clearme.test')->first()->assignRole(['student']));
+//
+//        return redirect()->to('/student/dashboard');
+//    })->name('student-dev-login');
+//
+//Route::get('sectional-admin', function () {
+//        \auth()->login(User::where('email', 'admin@clearme.test')->first()->assignRole(['sectional_admin']));
+//
+//        return redirect()->to(\route('sectional_admin.dashboard'));
+//    })->name('sectional-admin-dev-login');
+//});
 
 
 /** @var Router $router */
