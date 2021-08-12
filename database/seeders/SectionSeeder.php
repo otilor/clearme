@@ -15,16 +15,22 @@ class SectionSeeder extends Seeder
     {
         $sections = [
             'Academic Affairs',
+            'Bursary department',
+            'University Library',
             'Student Affairs',
-            'Library',
-            'ICT Unit',
-            'Laboratories',
-            'Hall of Residence',
-            'Head of Department',
             'Sports division',
+            'Biology laboratory',
+            'Microbiology laboratory',
+            'Chemistry laboratory',
+            'Biochemistry laboratory',
+            'Physics laboratory',
+            'Language laboratory',
+            'Mass communication Studio',
+            'ICT Unit',
+            'Head of Department',
+            'Faculty',
+            'Hall of Residence',
             'Security unit',
-            'Medicals',
-            'Bursary department'
         ];
         if (! Section::where('name', Arr::random($sections))->first()) {
             foreach ($sections as $section) {
