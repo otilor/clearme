@@ -32,6 +32,7 @@ class ClearanceRequestController extends Controller
 
         $clearanceRequest->forceFill(["payload->status->{$currentSection}" => ClearanceRequest::DECLINED ])->save();
 
+        dd($clearanceRequest);
         notify()->success("{$clonedClearanceRequest->student->name} has been declined clearance");
         return back();
     }
