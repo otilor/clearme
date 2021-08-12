@@ -14,6 +14,7 @@ class SectionSeeder extends Seeder
     public function run()
     {
         $sections = [
+            'Academic Affairs',
             'Student Affairs',
             'Library',
             'ICT Unit',
