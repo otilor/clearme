@@ -36,7 +36,7 @@
                             @endphp
                                 <tr>
                                     <td class="text-center">{{ $counter }}</td>
-                                    <td><a href="/" class="text-primary">{{$clearanceRequest->student->name}}</a></td>
+                                    <td><a class="text-primary">{{$clearanceRequest->student->name}}</a></td>
                                     <td>{{ $clearanceRequest->student->email }}</td>
                                     <td class="">
 

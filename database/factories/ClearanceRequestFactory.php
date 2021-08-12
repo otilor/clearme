@@ -46,7 +46,10 @@ class ClearanceRequestFactory extends Factory
                     'physics-laboratory' => ClearanceRequest::PENDING,
                     'language-laboratory' => ClearanceRequest::PENDING,
                     'mass-communication-studio' => ClearanceRequest::PENDING,
-                ]
+                ],
+                 'conditions' => [
+                     'mass-communication-studio' => Condition::where('slug','mass-communication-studio')->first()->payload,
+                 ]
             ],
         ];
     }
