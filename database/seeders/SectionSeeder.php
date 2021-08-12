@@ -15,6 +15,7 @@ class SectionSeeder extends Seeder
     {
         $sections = [
             'Student Affairs',
+            'Library',
             'ICT Unit',
             'Laboratories',
             'Hall of Residence',
